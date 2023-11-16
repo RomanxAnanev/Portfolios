@@ -1,0 +1,27 @@
+.services{
+    display: flex;
+    align-items: center;
+    height: 24px;
+    margin-bottom: 10px;
+}
+.services p{
+    color: #01131E;
+    font-family: Clash Display;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 75px;
+    margin-left: 15px;
+    margin-right: 5px;
+    display: flex;
+    vertical-align: middle;
+}
+.serviceImg > img{
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+.serviceImg > img:last-child{
+    margin-right: 0px;
+}

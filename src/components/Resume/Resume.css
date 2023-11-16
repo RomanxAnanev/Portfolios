@@ -1,0 +1,121 @@
+.resume{
+    background-color: #FFFFF3;
+    border-radius: 10px;
+    border-top: 2px solid #01131E;
+    border-right: 2px solid #01131E;
+    border-bottom: 4px solid #01131E;
+    border-left: 2px solid #01131E;
+    width: 476px;
+    height: 204px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background: url(ResumeSquare.svg) no-repeat 215px 65px
+    color(srgb 255 255 243);
+}
+.profile__avatar{
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.resume__profile{
+    display: flex;
+}
+.profile__info{
+    margin-left: 13px;
+    margin-top: 10px;
+}
+.info__name{
+    color: #01131E;
+    font-family: Clash Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.info__spec{
+    color: #01131E;
+    font-family: Clash Display;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal; 
+}
+.resume__service{
+    margin-top: 10px;
+}
+.resume__line{
+    position: absolute;
+    top: 0px;
+    left: 300px;
+}.link__title{
+    color: #01131E;
+    font-family: Clash Display;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 12px;
+    margin-right: 18px;
+}
+
+.link__price{
+    margin-top: 7px;
+    position: relative;
+}
+
+.price__count{
+    color: #01131E;
+    font-family: Clash Display;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-top: 6px;
+    text-align: center;
+    border-radius: 5px;
+    background: #B5FFFF;
+    width: 80px;
+    height: 35px;
+    position: relative;
+    z-index: 1;
+}
+.price__back{
+    width: 80px;
+    height: 35px;
+    border-radius: 5px;
+    border: 2px solid #01131E;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 0;
+}
+.link__arrow{
+    position: relative;
+}
+.arrow{
+    position: absolute;
+    top: -12px;
+    right: 45px;
+}
+.link__button{
+    border-radius: 10px;
+    border-top: 2px solid #01131E;
+    border-right: 2px solid #01131E;
+    border-bottom: 4px solid #01131E;
+    border-left: 2px solid #01131E;
+    background: #CF65FE;
+    display: flex;
+    width: 134px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    color: #01131E;
+    font-family: Clash Display;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 69px;
+    margin-right: 18px;
+    margin-left: auto;
+}

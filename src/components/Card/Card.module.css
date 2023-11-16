@@ -1,0 +1,60 @@
+.card{
+    width: 380px;
+    height: 435px;
+}
+
+
+.card__image{
+    max-width: 380px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 3px;
+    border: 3px solid #01131E;
+}
+.card__content{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content__author{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.author__image{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 2px solid #01131E;
+    object-fit: cover;
+}
+.author__name{
+    color: #01131E;
+    font-family: Clash Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.content__likes{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.likes__count{
+    color: #000;
+    text-align: right;
+    font-family: Clash Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.likes__button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}

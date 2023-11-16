@@ -1,0 +1,161 @@
+import React from 'react'
+import style from './Home.css'
+import { Resume } from '../../components/Resume/Resume'
+import { NavLink } from 'react-router-dom'
+
+const gallery = 
+    {
+        name: 'View gallery',
+        src: '/Gallery',
+    }
+const resumes = 
+    {
+        name: 'View resumes',
+        src: '/Resumes',
+    }
+    
+
+export const Home = () => {
+  return (
+    <>
+    <section className='heroSeaction container'>
+      <img className='heroSeaction_star' src="/HeroSeactionstar.svg" alt="" />
+      <div className="heroSeaction__portfolio">
+        <h1 className='portfolio__titleH1'>
+          Time to get 
+          <span> inspired</span>
+        </h1>
+        <h2 className='portfolio__titleH2'>
+          Share  your  work  and  evaluate the  work  of  others
+        </h2>
+        <p className='portfolio__descriprion'>
+          When people share their work, they get feedback, find colleagues and are inspired by others
+        </p>
+        <div className='portfolio__banner'>
+          <div className="banner__gallery">
+            <div className="gallery__Row">
+              <img src="/Photo1.png" alt="" />
+              <img src="/Photo2.png" alt="" />
+            </div>
+            <div className="gallery__img">
+              <img src="/GalleryVector.svg" alt="" />
+            </div>
+            <div className="gallery__Row">
+              <img src="/Photo3.png" alt="" />
+              <img src="/Photo4.png" alt="" />
+            </div>
+          </div>
+          <div>
+            <button className='banner__button'>
+              <NavLink to={gallery.src}>
+                  {gallery.name}
+              </NavLink>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className="heroSeaction__resumes">
+        <h1 className="resumes__titleH1">Or  start  a  project .</h1>
+        <h2 className='resumes__titleH2'>Leave  or  view resumes</h2>
+        <p className='resumes__descriprion'>
+          People can leave their resumes for employers to come out to them or find a person for a joint project
+        </p>
+        <div className='resumes__resume'> 
+          <Resume />
+        </div>
+        <button className='resumes__button'>
+            <NavLink to={resumes.src}>
+                {resumes.name}
+            </NavLink>
+        </button>
+      </div>
+    </section>
+
+    <section className="resumeSection__bg">
+      <div className="resumeSeaction container">
+        <div className="resumeSeacrion__title">
+          <h1>
+            Find  employees  people  for a  joint  project  or  let  them  look  for  you !
+          </h1>
+          <div className="resumeTitleStar">
+            <img src="/StarResumeSection.svg" alt="" />
+          </div>
+          <h2>
+            In  the  works  and  resumes there are  contacts  of  the authors
+          </h2>
+        </div>
+        <div className="resumeSection__avatar">
+          <div className="avatar__img">
+            <div className='avImg'>     
+            </div>
+            <div className="imgBg">
+            </div>
+            <img className='secondSecSquare' src="/SecondSecsquare.svg" alt="" />
+          </div>
+          <div className="avatar__secondSeactionSocBG">
+            <img className='secondSeactionSocBG__img' src="/Section2AvaterSoc.svg" alt="" />
+          </div>
+          <div className="avatar__buttons">
+            <button className='avatar__buttons__create'>
+              Create resumes
+            </button>
+            <button className='avatar__buttons__view'>
+            <NavLink to={resumes.src}>
+                {resumes.name}
+            </NavLink>
+        </button>
+          </div>
+          
+        </div> 
+      </div>
+      <div className="resumeSeacrion__Resumes container">
+          <Resume />
+          <Resume />
+        </div>
+    </section>
+
+    <div className="gallarySectionBG">
+    <section className="gallarySection container">
+      <div className="gallaryStar">
+        <img src="/GallaryStar.svg" alt="" />
+      </div>
+      <div className="gallarySeaction__photo">
+        <div className="gallarySeaction__photowr photo1">
+          {/* <img src="/Rectangle 56.png" alt="" /> */}
+        </div>
+        <div className="gallarySeaction__photowr photo2">
+          {/* <img src="/Rectangle 55.png" alt="" /> */}
+        </div>
+        <div className="gallarySeaction__photowr photo3">
+          {/* <img src="/Rectangle 54.png" alt="" /> */}
+        </div>
+      </div>
+      <div className="gallarySection__content ">
+        <div className="gallarySection__text">
+          <h1 className='gallarySeaction__h1'>
+            Everyone  can  post  their  work  Share  it  don't  be  shy
+          </h1>
+          <h2 className='gallarySeaction__h2'>
+            Browse other works and get inspired, share your own and   inspire others
+          </h2>
+        </div>
+        <div className="gallarySeactionArrow__wrapper">
+          <img className='gallarySeactionArrow' src="/GallarySeactionArrow.svg" alt="" />
+        </div>
+        <div className="gallarySection__content__buttons">
+          <button className='gallarySection__content__buttons__view'>
+              <NavLink to={gallery.src}>
+                  {gallery.name}
+              </NavLink>
+            </button>
+          <button className='gallarySection__content__buttons__share'>
+            Share work
+          </button>
+        </div>
+      </div>
+    </section>
+    </div>
+    </>
+  )
+}
+

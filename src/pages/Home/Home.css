@@ -1,0 +1,508 @@
+.heroSeaction{
+    display: flex;
+    margin-top: 60px;
+    position: relative;
+}
+
+.heroSeaction_star{
+    position: absolute;
+    right: -65px;
+    top: -55px;
+}
+
+.heroSeaction__portfolio{
+    border-radius: 20px 0px 0px 20px;
+    border-top: 3px solid #01131E;
+    border-right: 1.5px solid #01131E;
+    border-bottom: 6px solid #01131E;
+    border-left: 3px solid #01131E;
+    background: #CF65FE;
+    background-image: url(/StarG.svg);
+    background-repeat: no-repeat;
+    background-position: 8px 6px;
+    height: 655px;
+}
+
+.portfolio__banner{
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 530px;
+}
+
+.banner__gallery{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    border-top: 2px solid #01131E;
+    border-right: 2px solid #01131E;
+    border-bottom: 4px solid #01131E;
+    border-left: 2px solid #01131E;
+    background: #FFFFF3;
+    width: 530px;
+    height: 312px;
+    padding: 20px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.gallery__Row{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.gallery__img{
+    margin-top: 28px;
+}
+
+.banner__button{
+    border-radius: 10px;
+    border-top: 2px solid #01131E;
+    border-right: 2px solid #01131E;
+    border-bottom: 5px solid #01131E;
+    border-left: 2px solid #01131E;
+    background-color: #FFFFF3;
+    width: 162px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #01131E;
+    font-family: Clash Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-family: Clash Display;
+    position: absolute;
+    bottom: 20px;
+    left: 214px;
+    cursor: pointer;
+}
+
+.portfolio__titleH1{
+    color: #FFFFF3;
+    font-family: Clash Display;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    z-index: 2;
+    margin-left: 30px;
+    margin-bottom: 0px;
+    word-spacing: 5px;
+    margin-top: 25px;
+    max-width: 530px;
+}
+
+.portfolio__titleH1 > span{
+    color: #01131E;
+}
+
+.portfolio__titleH2{
+    color: #FFFFF3;
+    font-family: Clash Display;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 30px;
+    max-width: 505px;
+    letter-spacing: 0.12px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+
+}
+
+.portfolio__descriprion{
+    color: #FFFFF3;
+    font-family: Clash Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    max-width: 435px;
+    letter-spacing: 0.06px;
+}
+
+.heroSeaction__resumes{
+    background-color: #65FEED;
+    border-radius: 0px 20px 20px 0px;
+    border-top: 3px solid #01131E;
+    border-right: 3px solid #01131E;
+    border-bottom: 6px solid #01131E;
+    border-left: 1.5px solid #01131E;
+    max-width: 590px;
+    height: 655px;
+    width: 100%;
+    background-image: url(/VacanciesSquare.svg);
+    background-repeat: no-repeat;
+    background-position: 30px 160px;
+}
+
+.resumes__titleH1{
+    color: #01131E;
+    font-family: Clash Display;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-right: 27px;
+    margin-left: 57px;
+    margin-top: 25px;
+    width: 502px;
+}
+
+.resumes__titleH2{
+    color: #01131E;
+    font-family: Clash Display;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    max-width: 500px;
+    margin-left: 57px;
+    margin-top: 5px;
+
+}
+
+.resumes__descriprion{
+    color: #01131E;
+    font-family: Clash Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    max-width: 332px;
+    margin-left: 57px;
+    margin-top: 32px;
+    letter-spacing: 0.06px;
+    margin-bottom: 95px;
+}
+
+.resumes__resume{
+    margin-left: 57px;
+    margin-right: 57px;
+}
+.resumes__button{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 183px;
+    height: 48px;
+    gap: 10px;
+    border-radius: 10px;
+    border-top: 2px solid #01131E;
+    border-right: 2px solid #01131E;
+    border-bottom: 5px solid #01131E;
+    border-left: 2px solid #01131E;
+    background: #F94A29;
+    color: #01131E;
+    font-family: Clash Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 203px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+
+
+.resumeSection__bg{
+    background-color: #FEDE65;
+    height: 960px;
+}
+.resumeSeaction{
+    margin-top: 130px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.resumeSeacrion__title{
+    font-family: Clash Display;
+    padding-top: 130px;
+    position: relative;
+    background: url(ResumeSectionBGSquare.svg) no-repeat 417px 126px
+}
+
+.resumeSeacrion__title > h1{
+    width: 722px;
+    width: 100%;
+    color: #01131E;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    z-index: 2;
+    word-spacing: 7px;
+}
+
+.resumeTitleStar{
+    position: absolute;
+    top: 82px;
+    left: -65px;
+    z-index: 1;
+    
+}
+
+.resumeSeacrion__title > h2{
+    max-width: 551px;
+    width: 100%;
+    color: #01131E;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 20px;
+    margin-left: 127px;
+    word-spacing: 5px;
+    padding-bottom: 212px;
+    background: url(FIBEPS.svg) no-repeat 50px 110px
+}
+
+.resumeSection__avatar{
+    margin-top: 156px;
+    width: 100%;
+}
+
+.avatar__img{
+    /* background: url(/av1.svg)
+    no-repeat 0px 0px; */
+    position: relative;
+    z-index: 1;
+    width: 275px;
+    margin-left: 195px;
+    max-height: 280px;
+}
+
+.avImg{
+    border-radius: 100%;
+    border: 9px solid #01131E;
+    width: 272px;
+    height: 272px;
+    background-image: url(/AlexAVCicle.png);
+    background-size: cover;
+    background-color: #01131E;
+    position: relative;
+    z-index: 1;
+}
+
+.imgBg{
+    width: 272px;
+    height: 272px;
+    border-radius: 100%;
+    border: 9px solid #01131E;
+    position: absolute;
+    z-index: 0;
+    top: 5px;
+    left: 5px;
+}
+.secondSecSquare{
+    position: relative;
+    top: -290px;
+    left: -35px;
+    z-index: -1;
+}
+
+.avatar__secondSeactionSocBG{
+    position: relative;
+    bottom: 375px;
+    left: 20px;
+    z-index: 0px;
+}
+.secondSeactionSocBG__img{
+    position: absolute;
+
+}
+.avatar__buttons{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 106px;
+    justify-content: space-between;
+    margin-right: 240px;
+    margin-top: 10px;
+}
+.avatar__buttons__create{
+    color: #01131E;
+    font-family: Clash Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 10px;
+    border-top: 2px solid #01131E;
+    border-right: 2px solid #01131E;
+    border-bottom: 5px solid #01131E;
+    border-left: 2px solid #01131E;
+    background: #CF65FE;
+    width: 214px;
+    height: 48px;
+    cursor: pointer;
+}
+.avatar__buttons__view{
+    color: #01131E;
+    font-family: Clash Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 10px;
+    border-top: 2px solid #01131E;
+    border-right: 2px solid #01131E;
+    border-bottom: 5px solid #01131E;
+    border-left: 2px solid #01131E;
+    background: #F94A29;
+    width: 183px;
+    height: 48px;
+    cursor: pointer;
+}
+
+.resumeSeacrion__Resumes{
+    display: flex;
+    gap: 120px;
+    margin-bottom: 130px;
+}
+
+
+.gallarySectionBG{
+    background-color: #97F9FF;
+    padding-top: 10px;
+    padding-bottom: 130px;
+}
+.gallarySection{
+    background-image: url('/Frame50.svg');
+    background-position: 30px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 130px;
+}
+.gallarySeaction__h1{
+    color: #01131E;
+    text-align: right;
+    font-family: Clash Display;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 780px;
+    padding-top: 40px;
+}
+.gallarySeaction__h2{
+    color: #01131E;
+    font-family: Clash Display;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 380px;
+    margin-left: 400px;
+    margin-top: 16px;
+}
+
+.gallarySeactionArrow__wrapper{
+    position: relative;
+}
+
+.gallarySeactionArrow{
+    position: absolute;
+    left: 520px;
+    top: -30px;
+}
+.gallarySection__content__buttons{
+    margin-top: 53px;
+    margin-left: 400px;
+}
+.gallarySection__content__buttons__view{
+    width: 180;
+    height: 50px;
+    padding: 10px 20px 13px 20px;
+    border-radius: 10px;
+    border-top: 2px solid #01131E;
+    border-right: 2px solid #01131E;
+    border-bottom: 5px solid #01131E;
+    border-left: 2px solid #01131E;
+    background: #FFFFF3;
+    color: #01131E;
+    font-family: Clash Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.gallarySection__content__buttons__share{
+    width: 180;
+    height: 50px;
+    padding: 10px 20px 13px 20px;
+    border-radius: 10px;
+    border-top: 2px solid #01131E;
+    border-right: 2px solid #01131E;
+    border-bottom: 5px solid #01131E;
+    border-left: 2px solid #01131E;
+    background: #FEDE65;
+    color: #01131E;
+    font-family: Clash Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.gallaryStar{
+    position: absolute;
+    z-index: 0;
+    margin-left: -70px;
+    margin-top: 20px;
+}
+.gallarySeaction__photo{
+
+    display: flex;
+    position: relative;
+    margin-top: 90px;
+}
+.gallarySeaction__photowr{
+    border-radius: 12px;
+    border-top: 3px solid #01131E;
+    border-right: 3px solid #01131E;
+    border-bottom: 6px solid #01131E;
+    border-left: 3px solid #01131E;
+    width: 380px;
+    height: 250px;
+    
+}
+.photo1{
+    background-image: url(/Rectangle56.png);
+    border-color: #01131E;
+    position: absolute;
+
+}
+.photo2{
+    background-image: url(/Rectangle55.png);
+    border-color: #FFC839;
+    position: absolute;
+    left: 200px;
+    top: 50px;
+}
+.photo3{
+    background-image: url(/Rectangle54.png);
+    border-color: #F94A29;
+    position: absolute;
+    left: 400px;
+    top: 100px;
+}

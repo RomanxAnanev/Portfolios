@@ -1,0 +1,27 @@
+.Page404{
+    padding: 342px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    margin: 0;
+    background-color: #FFFFF3;
+}
+.titleH1{
+    color: #01131E;
+    font-family: Clash Display;
+    font-size: 92px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.titleH2{
+    color: #5A5A5A;
+    font-family: Clash Display;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
