@@ -1,12 +1,16 @@
 import React from 'react'
 import style from './Card.module.css'
+import { NavLink } from 'react-router-dom'
 
 const likes = 312
 
 export const Card = () => {
   return (
     <div className={style.card}>
-        <img className={style.card__image} src="/cardImage.png" alt="" />
+        {/* <NavLink to={home.src}  className={style.form__home}> */}
+            <img className={style.card__image} src="/cardImage.png" alt="" />
+        {/* </NavLink> */}
+        
         <div className={style.card__content}>
             <div className={style.content__author}>
                 <img className={style.author__image} src="/AccountImage.png" alt="" />

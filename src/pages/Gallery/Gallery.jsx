@@ -1,6 +1,8 @@
 import React from 'react'
 import style from './Gallery.module.css'
 import { Search } from '../../components/Search/Search'
+import { Card } from '../../components/Card/Card'
+
 
 export const Gallery = () => {
 
@@ -14,6 +16,15 @@ export const Gallery = () => {
             <button className={style.func__button}>
              Add  project
             </button>
+          </div>
+          <div className={style.gallery__projects}>
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
           </div>
         </div>
     </div>

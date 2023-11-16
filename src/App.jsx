@@ -37,6 +37,7 @@ function App() {
       element:
         <Layout>
           <Gallery/>
+          <Footer />
         </Layout>,
     },
     {

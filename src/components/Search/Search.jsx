@@ -5,7 +5,7 @@ export const Search = () => {
   return (
     <>
         <label htmlFor="">
-            <input className={style.input__search} type="search" placeholder='Write the anything' />
+            <input className={style.input__search} type="text" placeholder='Write the anything' />
             <button className={style.input__search__button}>Search</button>
         </label>
     </>
