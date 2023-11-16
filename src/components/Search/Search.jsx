@@ -1,0 +1,13 @@
+import React from 'react'
+import style from './Search.module.css'
+
+export const Search = () => {
+  return (
+    <>
+        <label htmlFor="">
+            <input className={style.input__search} type="search" placeholder='Write the anything' />
+            <button className={style.input__search__button}>Search</button>
+        </label>
+    </>
+  )
+}
