@@ -11,6 +11,8 @@ import { Login } from './pages/Login/Login'
 import { Footer } from './components/Footer/Footer';
 import { SignUp } from './pages/SignUp/SignUp';
 import { Page404 } from './pages/Page404/Page404'
+import { ProjectPage } from './pages/ProjectPage/ProjectPage'
+
 
 // rafc
 
@@ -30,6 +32,7 @@ function App() {
       element:
         <Layout>
           <Resumes/>
+          <Footer />
         </Layout>,
     },
     {
@@ -38,6 +41,13 @@ function App() {
         <Layout>
           <Gallery/>
           <Footer />
+        </Layout>,
+    },
+    {
+      path: "/ProjectPage",
+      element:
+        <Layout>
+          <ProjectPage/>
         </Layout>,
     },
     {
