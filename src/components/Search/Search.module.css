@@ -1,6 +1,10 @@
+/* .search{
+    display: flex;
+    align-items: center;
+} */
 .input__search{
     width: 370px;
-    height: 50px;
+    height: 51px;
     outline: none;
     border-radius: 8px 0px 0px 8px;
     border-top: 2px solid #01131E;
@@ -15,6 +19,7 @@
 }
 
 .input__search__button{
+    outline: none;
     background: #FFFFF3;
     color: #01131E;
     font-family: Clash Display;

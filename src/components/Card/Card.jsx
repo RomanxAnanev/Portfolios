@@ -5,11 +5,17 @@ import { NavLink } from 'react-router-dom'
 const likes = 312
 
 export const Card = () => {
+
+    const ProjectPage = 
+    {
+        src: '/ProjectPage',
+    }
+
   return (
     <div className={style.card}>
-        {/* <NavLink to={home.src}  className={style.form__home}> */}
+        <NavLink to={ProjectPage.src}  className={style.form__home}>
             <img className={style.card__image} src="/cardImage.png" alt="" />
-        {/* </NavLink> */}
+        </NavLink>
         
         <div className={style.card__content}>
             <div className={style.content__author}>

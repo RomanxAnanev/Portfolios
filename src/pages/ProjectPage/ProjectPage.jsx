@@ -1,5 +1,6 @@
 import React from 'react'
 import style from './ProjectPage.module.css'
+import { ResumeService } from '../../components/ResumeService/ResumeService'
 
 export const ProjectPage = () => {
   return (
@@ -40,6 +41,9 @@ export const ProjectPage = () => {
                         <p>
                             People can leave their vacancies for employers to come out to them or find a person for a joint projectPeople can leave their vacancies for employers to come out to them or find a person for a joint project
                         </p>
+                        <div className={style.resumeService}>
+                            <ResumeService />
+                        </div>
                     </div>
                 </div>
             </div>

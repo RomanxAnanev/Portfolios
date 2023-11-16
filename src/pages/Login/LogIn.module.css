@@ -7,7 +7,6 @@
     margin-right: -32px;
 }
 .logIn{
-    padding-top: 100px;
     color: #01131E;
     background-color: #FFFFF3;
     font-family: Clash Display;
@@ -15,6 +14,7 @@
     display: flex;
     flex-direction: column;
     place-items: center;
+    margin-top: 100px;
 }
 
 body {
