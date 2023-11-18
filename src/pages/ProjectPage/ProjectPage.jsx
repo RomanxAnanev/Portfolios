@@ -5,6 +5,7 @@ import { GoBackButton } from '../../components/GoBackButton/GoBackButton'
 
 
 export const ProjectPage = () => {
+    
   return (
     <div className={style.projectPage}>
 

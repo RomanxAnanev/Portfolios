@@ -5,16 +5,16 @@ a{
     max-width: 1180px;
     width: 100%;
     margin: auto;
+    margin-top: 60px;
 }
-.accountPage{
-    background-color: #fffff3;
-}
+
 .goBack__A:visited{
     color: #5A5A5A;
 }
 .accountPage__content{
     display: flex;
     gap: 40px;
+    margin-top: 10px;
 }
 .goBack{
     display: flex;
@@ -84,7 +84,7 @@ a{
     height: 80px;
 }
 .content__desc{
-    width: 580px;
+    width: 565px;
     color: #01131E;
     font-family: Clash Display;
     font-size: 20px;

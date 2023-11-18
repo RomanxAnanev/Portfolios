@@ -12,9 +12,9 @@ import { Footer } from './components/Footer/Footer';
 import { SignUp } from './pages/SignUp/SignUp';
 import { Page404 } from './pages/Page404/Page404'
 import { ProjectPage } from './pages/ProjectPage/ProjectPage'
+import { AddProjectPage } from './pages/AddProjectPage/AddProjectPage';
+import { AccountPage } from './pages/AccountPage/AccountPage'
 
-
-// rafc
 
 function App() {
 
@@ -59,6 +59,20 @@ function App() {
       path: "/SignUp",
       element:
           <SignUp/>,
+    },
+    {
+      path: "/AddProjectPage",
+      element:
+          <Layout>
+            <AddProjectPage/>
+          </Layout>,
+    },
+    {
+      path: "/AccountPage",
+      element:
+          <Layout>
+            <AccountPage/>
+          </Layout>,
     },
     {
       path: "*",

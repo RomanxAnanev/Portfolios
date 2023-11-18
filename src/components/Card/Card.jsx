@@ -6,14 +6,14 @@ const likes = 312
 
 export const Card = () => {
 
-    const ProjectPage = 
+    const projectPage = 
     {
         src: '/ProjectPage',
     }
 
   return (
     <div className={style.card}>
-        <NavLink to={ProjectPage.src}  className={style.form__home}>
+        <NavLink to={projectPage.src}  className={style.form__home}>
             <img className={style.card__image} src="/cardImage.png" alt="" />
         </NavLink>
         

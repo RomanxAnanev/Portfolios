@@ -1,6 +1,7 @@
 import React from 'react'
 import style from './Resume.css'
 import { ResumeService } from  '../ResumeService/ResumeService.jsx'
+import { NavLink } from 'react-router-dom'
 
 
 export const Resume = () => {
@@ -14,6 +15,10 @@ export const Resume = () => {
             avgPrice: ''
         }
     ]
+    const projectPage = 
+    {  
+        src: '/AccountPage',
+    }
 
     return (
     <div className="resume">
@@ -45,7 +50,10 @@ export const Resume = () => {
             <div className="link__arrow">
                 <img className='arrow' src="/resumeArrow.svg" alt="" />
             </div>
-            <button className='link__button'>Profile</button>
+            <NavLink to={projectPage.src}>
+                <button className='link__button'>Profile</button>
+            </NavLink> 
+            
         </div>
     </div>
     )

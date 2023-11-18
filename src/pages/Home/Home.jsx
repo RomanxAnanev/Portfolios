@@ -13,6 +13,11 @@ const resumes =
         name: 'View resumes',
         src: '/Resumes',
     }
+const addProjectPage = 
+  {
+    name: 'Share work',
+    src: '/addProjectPage',
+  }
     
 
 export const Home = () => {
@@ -46,11 +51,11 @@ export const Home = () => {
             </div>
           </div>
           <div>
-            <button className='banner__button'>
               <NavLink to={gallery.src}>
-                  {gallery.name}
-              </NavLink>
-            </button>
+                <button className='banner__button'>
+                    {gallery.name}
+                  </button>
+              </NavLink>  
           </div>
         </div>
       </div>
@@ -63,11 +68,11 @@ export const Home = () => {
         <div className='resumes__resume'> 
           <Resume />
         </div>
-        <button className='resumes__button'>
-            <NavLink to={resumes.src}>
+          <NavLink to={resumes.src}>
+            <button className='resumes__button'>
                 {resumes.name}
-            </NavLink>
-        </button>
+            </button>
+          </NavLink>       
       </div>
     </section>
 
@@ -98,12 +103,12 @@ export const Home = () => {
           <div className="avatar__buttons">
             <button className='avatar__buttons__create'>
               Create resumes
-            </button>
-            <button className='avatar__buttons__view'>
+            </button>     
             <NavLink to={resumes.src}>
+              <button className='avatar__buttons__view'>
                 {resumes.name}
-            </NavLink>
-        </button>
+              </button>
+            </NavLink>         
           </div>
           
         </div> 
@@ -142,15 +147,19 @@ export const Home = () => {
         <div className="gallarySeactionArrow__wrapper">
           <img className='gallarySeactionArrow' src="/GallarySeactionArrow.svg" alt="" />
         </div>
-        <div className="gallarySection__content__buttons">
-          <button className='gallarySection__content__buttons__view'>
-              <NavLink to={gallery.src}>
-                  {gallery.name}
-              </NavLink>
+        <div className="gallarySection__content__buttons">         
+          <NavLink to={gallery.src}>
+            <button className='gallarySection__content__buttons__view'>
+                {gallery.name}
             </button>
-          <button className='gallarySection__content__buttons__share'>
-            Share work
-          </button>
+          </NavLink>          
+          
+          <NavLink to={addProjectPage.src}>
+            <button className='gallarySection__content__buttons__share'>
+              {addProjectPage.name}
+            </button>
+          </NavLink>
+          
         </div>
       </div>
     </section>

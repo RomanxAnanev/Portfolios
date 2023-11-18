@@ -9,7 +9,7 @@ export const Resumes = () => {
       <div className={style.resumes__func}>
           <Search />
           <button className={style.func__button}>
-           Add  project
+           Add  resume
           </button>
       </div>
       <div className={style.resumes__resume}>

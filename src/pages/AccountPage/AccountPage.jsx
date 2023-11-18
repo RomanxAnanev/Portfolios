@@ -1,11 +1,13 @@
 import React from 'react'
 import style from './AccountPage.module.css'
-import { Card } from '../Component/Card/Card'
+import { Card } from '../../components/Card/Card'
 import { GoBackButton } from '../../components/GoBackButton/GoBackButton' 
 
 export const AccountPage = () => {
   return (
-    <div className={style.accountPage}>
+
+
+    <div className={style.accountPage__container}>
 
         <GoBackButton />
 
