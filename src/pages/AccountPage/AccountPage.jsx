@@ -2,6 +2,7 @@ import React from 'react'
 import style from './AccountPage.module.css'
 import { Card } from '../../components/Card/Card'
 import { GoBackButton } from '../../components/GoBackButton/GoBackButton' 
+import { ResumeService } from '../../components/ResumeService/ResumeService'
 
 export const AccountPage = () => {
   return (
@@ -33,6 +34,9 @@ export const AccountPage = () => {
                     <p>
                         People can leave their vacancies for employers to come out to them or find a person for a joint projectPeople can leave their vacancies for employers to come out to them or find a person for a joint project
                     </p>
+                </div>
+                <div className={style.resumeService}>
+                    <ResumeService />
                 </div>
             </div>
             

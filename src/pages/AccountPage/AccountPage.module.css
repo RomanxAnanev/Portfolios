@@ -26,7 +26,6 @@ a{
     line-height: normal;
     text-decoration-line: underline;
     align-items: flex-start;
-    margin-bottom: 10px;
 }
 .content__img{
     outline: 3px solid #01131E;
@@ -101,4 +100,8 @@ a{
     flex-wrap: wrap;
     gap: 60px 20px;
     max-width: 1180px;
+}
+.resumeService{
+    margin-top: 20px;
+    margin-left: -15px;
 }
