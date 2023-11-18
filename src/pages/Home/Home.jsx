@@ -43,15 +43,23 @@ export const Home = () => {
         <div className='portfolio__banner'>
           <div className="banner__gallery">
             <div className="gallery__Row">
-              <img src="/Photo1.png" alt="" />
-              <img src="/Photo2.png" alt="" />
+              <div className='gallery__Row__img'>
+                <img src="/Photo1.png" alt="" />
+              </div>
+              <div className='gallery__Row__img'>
+                <img src="/Photo2.png" alt="" />
+              </div>
             </div>
             <div className="gallery__img">
               <img src="/GalleryVector.svg" alt="" />
             </div>
             <div className="gallery__Row">
-              <img src="/Photo3.png" alt="" />
-              <img src="/Photo4.png" alt="" />
+            <div className='gallery__Row__img'>
+                <img src="/Photo3.png" alt="" />
+              </div>
+              <div className='gallery__Row__img'>
+                <img src="/Photo4.png" alt="" />
+              </div>
             </div>
           </div>
           <div>

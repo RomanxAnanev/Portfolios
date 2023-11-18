@@ -50,6 +50,28 @@
     flex-direction: column;
     justify-content: space-between;
 }
+.gallery__Row__img{
+    position: relative;
+    width: 200px;
+    height: 125px;
+
+
+    &::after{
+        content: '';
+        border: 1px solid #01131E;
+        border-radius: 4px;
+        top: 5px;
+        left: 5px;
+        width: calc(100%);
+        height: calc(100%);
+        position: absolute;
+        z-index: 0;
+    }
+}
+.gallery__Row__img > img{
+    position: absolute;
+    z-index: 2;
+}
 
 .gallery__img{
     margin-top: 28px;
@@ -75,6 +97,7 @@
     line-height: normal;
     font-family: Clash Display;
     position: absolute;
+    z-index: 2;
     bottom: 20px;
     left: 214px;
     cursor: pointer;
