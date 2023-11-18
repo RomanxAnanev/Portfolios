@@ -38,9 +38,6 @@ export const Header = () => {
                     <NavLink to={item.src} key={item.name} className={({isActive}) => isActive ?  "header__li header__li_Active" : "header__li"} >
                         <div>
                             {item.name}
-                            <div className='header__li__active__background'>
-
-                            </div>
                         </div>
                     </NavLink>
                     ))}
@@ -58,3 +55,4 @@ export const Header = () => {
     </div>
   )
 }
+

@@ -60,29 +60,26 @@ a{
     display: flex;
     justify-content: center;
     padding: 5px 10px;
-    position: relative;
 
 }
-.header__li_Active{
+.header__li_Active {
     color: #FFFFFF;
     background-color: #01131E;
     border-radius: 4px;
-}
-/* .header__li_Active::after{
-    border: 1px solid #01131E;
-    border-radius: 4px;
-    top: 5px;
-    left: 5px;
-    width: 100%;
-    height: 50px;
-    position: absolute;
-} */
-.header__li__active__background{
-    border: 1px solid #01131E;
-    border-radius: 4px;
-    top: 4px;
-    left: 4px;
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    position: relative;
+
+    &::after {
+        content: '';
+        border: 1px solid #01131E;
+        border-radius: 4px;
+        top: 4px;
+        left: 4px;
+        width: calc(100%);
+        height: calc(100%);
+        position: absolute;
+        transition: all 0.3s ease; 
+        opacity: 1;
+    }
+
+
 }
