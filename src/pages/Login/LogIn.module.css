@@ -9,7 +9,7 @@
 .logIn{
     color: #01131E;
     background-color: #FFFFF3;
-    font-family: Clash Display;
+    font-family: Clash Display, Roboto;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@ body {
 
 input{
     color: #000;
-    font-family: Clash Display;
+    font-family: Clash Display, Roboto;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -44,7 +44,7 @@ input{
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: Clash Display;
+    font-family: Clash Display, Roboto;
 }
 .title__h2{
     max-width: 430px;
@@ -79,12 +79,13 @@ input{
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    font-family: Clash Display;
+    font-family: Clash Display, Roboto;
     color: #01131E;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    position: relative;
 }
 .password__span{
     color: #5A5A5A;
@@ -104,7 +105,7 @@ input{
     border-radius: 8px;
     border: 2px solid #01131E;
     background: #FFFFF3;
-    font-family: Clash Display;
+    font-family: Clash Display, Roboto;
     padding-left: 10px;
     transition: border-bottom 0.08s ease;
     transition: height 0.08s ease;
@@ -194,5 +195,27 @@ input{
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+}
+.showPassword{
+    cursor: pointer;
+    background: url(/PasswordHide.svg) no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: 11px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+.hidePassword{
+    cursor: pointer;
+    background: url(/ShowPasswordOpenEye.svg) no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: 11px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border: none;
 }
   
