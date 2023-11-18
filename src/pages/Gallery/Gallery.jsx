@@ -3,9 +3,12 @@ import style from './Gallery.module.css'
 import { Search } from '../../components/Search/Search'
 import { Card } from '../../components/Card/Card'
 import { NavLink } from 'react-router-dom'
+import { ZeroScroll } from '../../components/ZeroScroll/ZeroScroll'
 
 
 export const Gallery = () => {
+
+  ZeroScroll()
 
     const addProjectPage = {
     name: 'Add work',

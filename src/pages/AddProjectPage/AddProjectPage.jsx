@@ -1,8 +1,12 @@
 import React from 'react'
 import style from './AddProjectPage.module.css'
 import { GoBackButton } from '../../components/GoBackButton/GoBackButton'
+import { ZeroScroll } from '../../components/ZeroScroll/ZeroScroll'
 
 export const AddProjectPage = () => {
+
+  ZeroScroll()
+  
   return (
     <div className={style.addProjectPage}>
       

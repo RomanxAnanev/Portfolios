@@ -2,6 +2,7 @@ import React from 'react'
 import style from './Home.css'
 import { Resume } from '../../components/Resume/Resume'
 import { NavLink } from 'react-router-dom'
+import { ZeroScroll } from '../../components/ZeroScroll/ZeroScroll'
 
 const gallery = 
     {
@@ -21,6 +22,9 @@ const addProjectPage =
     
 
 export const Home = () => {
+
+  ZeroScroll()
+  
   return (
     <>
     <section className='heroSeaction container'>

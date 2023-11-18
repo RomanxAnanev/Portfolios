@@ -3,8 +3,12 @@ import style from './AccountPage.module.css'
 import { Card } from '../../components/Card/Card'
 import { GoBackButton } from '../../components/GoBackButton/GoBackButton' 
 import { ResumeService } from '../../components/ResumeService/ResumeService'
+import { ZeroScroll } from '../../components/ZeroScroll/ZeroScroll'
 
 export const AccountPage = () => {
+
+    ZeroScroll()
+
   return (
 
 
