@@ -55,4 +55,24 @@ a{
     padding: 10px 20px 11px 20px;
     cursor: pointer;
 }
+.header__li{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5px 10px;
+    position: relative;
 
+}
+.header__li_Active{
+    color: #FFFFFF;
+    background-color: #01131E;
+    border-radius: 4px;
+}
+.header__li_Active::after{
+    border: 1px solid #01131E;
+    border-radius: 4px;
+    top: 5px;
+    left: 5px;
+    height: 50px;
+    position: absolute;
+}

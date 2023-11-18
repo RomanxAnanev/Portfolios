@@ -35,18 +35,18 @@ export const Header = () => {
             <div className='nav__menu'>
                 <ul className='menu'>
                     {menu.map(item => (
-                    <NavLink to={item.src} key={item.name}>
+                    <NavLink to={item.src} key={item.name} className={({isActive}) => isActive ?  "header__li header__li_Active" : "header__li"} >
                         {item.name}
                     </NavLink>
                     ))}
                 </ul>
             </div>
-            <div className='nav__login'>   
+            <div className='nav__login'>
                 <NavLink to={login.src}>
                     <button className='login'>
                         {login.name}
                     </button>
-                </NavLink>  
+                </NavLink>
             </div>
         </div>
     </div>

@@ -4,7 +4,7 @@
 } */
 @font-face {
 	font-family: 'Furore'; 
-	src: url('./fonts/Furore/Furore.otf') format('otf'); 
+	src: url('././fonts/Furore/Furore.otf') format('otf'); 
 }
 .input__search{
     width: 365px;
