@@ -1,14 +1,14 @@
 import React from 'react'
 import style from './AccountPage.module.css'
 import { Card } from '../Component/Card/Card'
-
+import { GoBackButton } from '../../components/GoBackButton/GoBackButton' 
 
 export const AccountPage = () => {
   return (
     <div className={style.accountPage}>
-        <div className={style.goBack}>
-            <a className={style.goBack__A} href="">Go back</a>
-        </div>
+
+        <GoBackButton />
+
         <div className={style.accountPage__content}>
             <img className={style.content__img} src="/AccountImage.png" alt="" />
             <div className={style.content__author}>
