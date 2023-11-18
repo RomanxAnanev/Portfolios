@@ -87,6 +87,7 @@ input{
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    position: relative;
 }
 .password__span{
     color: #5A5A5A;
@@ -211,5 +212,27 @@ input{
     line-height: normal;
     position: absolute;
     margin-top: 135px;
+}
+.showPassword{
+    cursor: pointer;
+    background: url(/PasswordHide.svg) no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: 11px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+.hidePassword{
+    cursor: pointer;
+    background: url(/ShowPasswordOpenEye.svg) no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: 11px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border: none;
 }
   

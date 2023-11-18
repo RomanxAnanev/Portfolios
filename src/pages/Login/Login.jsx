@@ -6,7 +6,6 @@ import { NavLink } from 'react-router-dom'
 export const Login = () => {
 
   const [type,setType] = useState('password')
-
   const [eye, setEye] = useState(style.showPassword)
   
 

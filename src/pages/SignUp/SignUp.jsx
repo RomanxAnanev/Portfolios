@@ -1,9 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style from './SignUp.module.css'
 import { Formik } from 'formik';
 import { NavLink } from 'react-router-dom'
 
 export const SignUp = () => {
+
+  const [type,setType] = useState('password')
+  const [eye, setEye] = useState(style.showPassword)
+  
+  const switchType = () =>{
+    if(type === 'password'){
+        setType('text')
+        setEye(style.hidePassword)
+    } else{
+        setType('password')
+        setEye(style.showPassword)
+    }
+  }
 
   const login = 
   {
@@ -81,12 +94,13 @@ export const SignUp = () => {
 
            <input
              className={style.inputText}
-             type="password"
+             type={type}
              name="password"
              onChange={handleChange}
              onBlur={handleBlur}
              value={values.password}
            />
+           <button className={eye} onClick={switchType}></button>
            <div className={style.error__password}>
                 {errors.password && touched.password && errors.password}
            </div>
@@ -99,12 +113,13 @@ export const SignUp = () => {
 
            <input
              className={style.inputText}
-             type="password"
+             type={type}
              name="passwordConfirm"
              onChange={handleChange}
              onBlur={handleBlur}
              value={values.passwordConfirm}
            />
+           <button className={eye} onClick={switchType}></button>
            
            <div className={style.error__password}>
                 {errors.passwordConfirm && touched.passwordConfirm && errors.passwordConfirm}
