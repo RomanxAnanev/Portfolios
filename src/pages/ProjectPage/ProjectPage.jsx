@@ -1,13 +1,15 @@
 import React from 'react'
 import style from './ProjectPage.module.css'
 import { ResumeService } from '../../components/ResumeService/ResumeService'
+import { GoBackButton } from '../../components/GoBackButton/GoBackButton'
+
 
 export const ProjectPage = () => {
   return (
     <div className={style.projectPage}>
-        <div className={style.goBack}>
-            <a href="">Go back</a>
-        </div>
+
+        <GoBackButton />
+
         <div className={style.projectPage__container}>
             <div className={style.projectPage__title}>
                 <div className={style.title__h1}>
