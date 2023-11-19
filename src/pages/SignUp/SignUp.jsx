@@ -1,24 +1,23 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import style from './SignUp.module.css'
 import { Formik } from 'formik';
-import { NavLink, useNavigate } from 'react-router-dom'
-import axios from 'axios'
-import { CustomContextProvider } from '../../../context';
+import { NavLink } from 'react-router-dom'
+
 
 export const SignUp = () => {
 
-  // const [type,setType] = useState('password')
-  // const [eye, setEye] = useState(style.showPassword)
+  const [type,setType] = useState('password')
+  const [eye, setEye] = useState(style.showPassword)
   
-  // const switchType = () =>{
-  //   if(type === 'password'){
-  //       setType('text')
-  //       setEye(style.hidePassword)
-  //   } else{
-  //       setType('password')
-  //       setEye(style.showPassword)
-  //   }
-  // }
+  const switchType = () =>{
+    if(type === 'password'){
+        setType('text')
+        setEye(style.hidePassword)
+    } else{
+        setType('password')
+        setEye(style.showPassword)
+    }
+  }
   
 
   // роутинг 
@@ -35,33 +34,12 @@ export const SignUp = () => {
 
 
   // регистрация
-  const navigate = useNavigate()
 
-  const {user, setUser} = useContext(CustomContextProvider)
+
+
 
   const registerUser = (e) => {
-    e.preventDefault()
-    
-    let newUser = {
-        email: e.target[0].value,
-        password: e.target[1].value
-    }
-    axios.post('http://localhost:8080/User' , newUser)
-      .then(({data}) => {
-        setUser({
-          token: data.accessToken,
-          ...data.user
-        })
-
-        localStorage.setItem('user', JSON.stringify({
-          token: data.accessToken,
-          ...data.user
-        }))
-
-        navigate('/')
-      })
-      .catch((err) => console.log(err.massage ))
-
+    e.preventDefault() 
   }
 
   return (

@@ -1,7 +1,6 @@
 import React from 'react'
 import style from './Card.module.css'
 import { NavLink } from 'react-router-dom'
-import { project } from '../../../dbUser.json'
 const likes = 312
 
 export const Card = () => {
