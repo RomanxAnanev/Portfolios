@@ -4,10 +4,16 @@ import { Card } from '../../components/Card/Card'
 import { GoBackButton } from '../../components/GoBackButton/GoBackButton' 
 import { ResumeService } from '../../components/ResumeService/ResumeService'
 import { ZeroScroll } from '../../components/ZeroScroll/ZeroScroll'
+import { NavLink } from 'react-router-dom'
+
 
 export const AccountPage = () => {
 
-    ZeroScroll()
+  ZeroScroll()
+
+  const editPage = {
+    src: '/EditProfile'
+  }
 
   return (
 
@@ -33,6 +39,12 @@ export const AccountPage = () => {
                             UX | UI Designer
                         </h2>
                     </div>
+                    <div className={style.button__edit}>
+                    <NavLink to = {editPage.src}>
+                            <img src="/editProfile.svg" alt="" />
+                    </NavLink>
+                    </div>
+                    
                 </div>
                 <div className={style.content__desc}>
                     <p>
