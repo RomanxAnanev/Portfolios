@@ -1,23 +1,27 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import style from './SignUp.module.css'
 import { Formik } from 'formik';
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import { CustomContextProvider } from '../../../context';
 
 export const SignUp = () => {
 
-  const [type,setType] = useState('password')
-  const [eye, setEye] = useState(style.showPassword)
+  // const [type,setType] = useState('password')
+  // const [eye, setEye] = useState(style.showPassword)
   
-  const switchType = () =>{
-    if(type === 'password'){
-        setType('text')
-        setEye(style.hidePassword)
-    } else{
-        setType('password')
-        setEye(style.showPassword)
-    }
-  }
+  // const switchType = () =>{
+  //   if(type === 'password'){
+  //       setType('text')
+  //       setEye(style.hidePassword)
+  //   } else{
+  //       setType('password')
+  //       setEye(style.showPassword)
+  //   }
+  // }
+  
 
+  // роутинг 
   const login = 
   {
       name: 'Login now',
@@ -28,6 +32,37 @@ export const SignUp = () => {
       name: 'Go back to home page',
       src: '/',
     }
+
+
+  // регистрация
+  const navigate = useNavigate()
+
+  const {user, setUser} = useContext(CustomContextProvider)
+
+  const registerUser = (e) => {
+    e.preventDefault()
+    
+    let newUser = {
+        email: e.target[0].value,
+        password: e.target[1].value
+    }
+    axios.post('http://localhost:8080/User' , newUser)
+      .then(({data}) => {
+        setUser({
+          token: data.accessToken,
+          ...data.user
+        })
+
+        localStorage.setItem('user', JSON.stringify({
+          token: data.accessToken,
+          ...data.user
+        }))
+
+        navigate('/')
+      })
+      .catch((err) => console.log(err.massage ))
+
+  }
 
   return (
     <div className={style.logIn}>
@@ -50,10 +85,9 @@ export const SignUp = () => {
         return errors;
        }}
     
-       onSubmit={(values, { setSubmitting }) => {
+       onSubmit={(values, { registerUser }) => {
          setTimeout(() => {
-           alert(JSON.stringify(values, null, 2));
-           setSubmitting(false);
+           registerUser(false);
          }, 400);
        }}
      >
@@ -67,7 +101,7 @@ export const SignUp = () => {
          isSubmitting,
          /* and other goodies */
        }) => (
-         <form className={style.form__content} onSubmit={handleSubmit}>
+         <form className={style.form__content} onSubmit={registerUser}>
             <div className={style.content__title}>
                 <h2 className={style.title__h2}>Sign up with your work email</h2>
                 <p className={style.title__p}>Use your work email to Sign up in to your account  </p>
@@ -100,7 +134,7 @@ export const SignUp = () => {
              onBlur={handleBlur}
              value={values.password}
            />
-           <button className={eye} onClick={switchType}></button>
+           {/* <button className={eye} onClick={switchType}></button> */}
            <div className={style.error__password}>
                 {errors.password && touched.password && errors.password}
            </div>
@@ -119,7 +153,7 @@ export const SignUp = () => {
              onBlur={handleBlur}
              value={values.passwordConfirm}
            />
-           <button className={eye} onClick={switchType}></button>
+           {/* <button className={eye} onClick={switchType}></button> */}
            
            <div className={style.error__password}>
                 {errors.passwordConfirm && touched.passwordConfirm && errors.passwordConfirm}

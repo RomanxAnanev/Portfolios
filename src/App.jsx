@@ -15,6 +15,8 @@ import { ProjectPage } from './pages/ProjectPage/ProjectPage'
 import { AddProjectPage } from './pages/AddProjectPage/AddProjectPage';
 import { AccountPage } from './pages/AccountPage/AccountPage'
 import { EditProfile } from './pages/EditProfile/EditProfile';
+import { CustomContextProvider } from '../context';
+
 
 
 function App() {
@@ -59,7 +61,9 @@ function App() {
     {
       path: "/SignUp",
       element:
-          <SignUp/>,
+          
+            <SignUp/>,
+
     },
     {
       path: "/AddProjectPage",
@@ -92,7 +96,9 @@ function App() {
 
   return (
     <>
+      <CustomContextProvider>
         <RouterProvider router={router} />
+      </CustomContextProvider>
     </>
   )
 }

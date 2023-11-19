@@ -1,0 +1,21 @@
+{
+  "user": [
+    {
+      "email": "ananjew@icloud.com",
+      "password": "12312easd",
+      "login": "user_login",
+      "id": 1
+      
+    }
+  ],
+  "project": [
+    {
+        "project_id": "",
+        "user_id": "",
+        "title": "",
+        "description": "",
+        "likes": "",
+        "image": ""
+    }
+  ]
+}
