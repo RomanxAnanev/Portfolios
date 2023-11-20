@@ -1,12 +1,47 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import style from './EditProfile.module.css'
 import { GoBackButton } from '../../components/GoBackButton/GoBackButton' 
 import { SelectDropdownContact } from "../../components/SelectDropDown/SelectDropDownContact";
 import { SelectDropdownProject } from "../../components/SelectDropDown/SelectDropDownProject";
 import { SelectDropdownStack } from "../../components/SelectDropDown/SelectDropDownStack";
-
+import { createClient } from '@supabase/supabase-js';
 
 export const EditProfile = () => {
+  const supabase = createClient('https://ndnfqgznxmxuserdlhhl.supabase.co',"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5kbmZxZ3pueG14dXNlcmRsaGhsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDA0MDQwNjUsImV4cCI6MjAxNTk4MDA2NX0.XBHCk_KnwRYLHRGt3jqjdVrls5Y6x3Z-nX9YL4zIaAs" );
+const [user, setUser] = useState(null);
+const [name, setName] = useState("");
+const [profession, setProfession] = useState("");
+const [description, setDescription] = useState("");
+
+  const [contacts, setContacts] = useState({vk: null, tg: null, fb: null})
+  const [projects, setProjects] = useState({dribble: null, behance: null})
+  const [stack, setStack] = useState({figma: null, ps: null, ai: null})
+
+  const email = localStorage.getItem("email")
+  const id = localStorage.getItem("id");
+
+  const onSubmit = async () => {
+    const { data } = await supabase
+    .from('users')
+    .update({ name: name, description: description, profession: profession, vk: contacts.vk, telegram: contacts.tg, facebook: contacts.fb, dribble: projects.dribble, behance: projects.behance, figma: stack.figma, ps: stack.ps, ai: stack.ai})
+    .eq('email', email);
+
+    location.href = `${location.origin}/AccountPage/${id}`
+  };
+
+  useEffect(() => {
+    (async () => {
+      const { data, error } = await supabase
+      .from('users')
+      .select('*')
+      .eq("email", email);
+      setUser(data[0]);
+      setContacts({vk: data[0].vk, tg: data[0].telegram || null, fb: data[0].facebook || null})
+      setProjects({dribble: data[0].dribble || null, behance: data[0].behance || null})
+      setStack({figma: data[0].figma || null, ps: data[0].ps || null, ai: data[0].ai || null})
+    })()
+  }, [])
+
   return (
     <div className={style.editProfile}>
       
@@ -16,26 +51,30 @@ export const EditProfile = () => {
         <img className={style.profile__img} src="/AccountImage.png" alt="" />
         <label className={style.inputs} htmlFor="">
           <h1 className={style.input__title}>Name</h1>
-          <input type="text" />
+          {user &&  <input type="text" onChange={(e) => setName(e.target.value)} value={name || user.name} />}
           <h1 className={style.input__title}>Profession</h1>
-          <input type="text" />
+          {user && <input type="text" onChange={(e) => setProfession(e.target.value)} value={profession || user.profession} />}
           <h1 className={style.input__title}>Descriptoin</h1>
-          <input type="text" />
+          {user && <input type="text" onChange={(e) => setDescription(e.target.value)} value={description || user.description} />}
         </label>     
       </div>
       <label className={style.services} htmlFor="">
         <div className={style.service__inputs}>
-            <div className={style.service}>
-                <SelectDropdownContact />
+            {user && (
+              <>
+              <div className={style.service}>
+                <SelectDropdownContact contacts={contacts} vk={user.vk} tg={user.telegram} fb={user.facebook} setContacts={setContacts} />
             </div>
             <div className={style.service}>
-                <SelectDropdownProject />
+                <SelectDropdownProject projects={projects} dribble={user.dribble} behance={user.behance} setProjects={setProjects} />
             </div>
             <div className={style.service}>
-                <SelectDropdownStack />
+                <SelectDropdownStack stackValue={stack} figma={user.figma} ps={user.ps} ai={user.ai} setStack={setStack} />
             </div>
+              </>
+            )}
         </div>
-        <button className={style.button} type='submit'>Confirm</button>
+        <button className={style.button} type='button' onClick={onSubmit}>Confirm</button>
       </label>
 
     </div>

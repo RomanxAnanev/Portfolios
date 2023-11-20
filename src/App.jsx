@@ -74,7 +74,7 @@ function App() {
           </Layout>,
     },
     {
-      path: "/AccountPage",
+      path: "/AccountPage/:id",
       element:
           <Layout>
             <AccountPage/>
@@ -94,6 +94,7 @@ function App() {
     },
 
   ]);
+  
 
   return (
     <>

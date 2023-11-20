@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import style from './Header.css'
 import { NavLink } from 'react-router-dom'
+
 
 
 const menu = [
@@ -17,14 +18,11 @@ const menu = [
      src: '/Gallery',
     }
 ]
-const login = 
-    {
-        name: 'LogIn',
-        src: '/LogIn',
-    }
 
 
 export const Header = () => {
+    const email = localStorage.getItem("email")
+    const id = localStorage.getItem("id");
   return (
     <div className="container">
         <div className='header'>
@@ -44,9 +42,9 @@ export const Header = () => {
                 </ul>
             </div>
             <div className='nav__login'>
-                <NavLink to={login.src}>
+                <NavLink to={email ? `/AccountPage/${id}` : "/LogIn"}>
                     <button className='login'>
-                        {login.name}
+                        {email ? location.href.includes("/AccountPage") ? "LogOut" : "Profile" : "LogIn"}
                     </button>
                 </NavLink>
             </div>

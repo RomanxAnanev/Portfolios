@@ -2,12 +2,16 @@ import React, { useState } from 'react'
 import style from './SignUp.module.css'
 import { Formik } from 'formik';
 import { NavLink } from 'react-router-dom'
+import { createClient } from '@supabase/supabase-js';
+
 
 
 export const SignUp = () => {
-
+  const supabase = createClient('https://ndnfqgznxmxuserdlhhl.supabase.co',"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5kbmZxZ3pueG14dXNlcmRsaGhsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDA0MDQwNjUsImV4cCI6MjAxNTk4MDA2NX0.XBHCk_KnwRYLHRGt3jqjdVrls5Y6x3Z-nX9YL4zIaAs" );
   const [type,setType] = useState('password')
   const [eye, setEye] = useState(style.showPassword)
+  
+
   
   const switchType = () =>{
     if(type === 'password'){
@@ -38,9 +42,18 @@ export const SignUp = () => {
 
 
 
-  const registerUser = (e) => {
-    e.preventDefault() 
-  }
+  const registerUser = async (email, password) => { 
+    console.log(email, password);
+      const { data, error } = await supabase.auth.signUp({
+        email: email,
+        password: password,
+      })
+
+      
+    const { data:data2 } = await supabase
+    .from('users')
+    .insert({  email: email })
+      }
 
   return (
     <div className={style.logIn}>
@@ -79,7 +92,7 @@ export const SignUp = () => {
          isSubmitting,
          /* and other goodies */
        }) => (
-         <form className={style.form__content} onSubmit={registerUser}>
+         <form className={style.form__content} onSubmit={() => console.log(values.email, values.password)}>
             <div className={style.content__title}>
                 <h2 className={style.title__h2}>Sign up with your work email</h2>
                 <p className={style.title__p}>Use your work email to Sign up in to your account  </p>
@@ -138,7 +151,10 @@ export const SignUp = () => {
             </div>
             </label>
            
-           <button type="submit" disabled={isSubmitting} className={style.form__button}>
+           <button type="button" disabled={isSubmitting} className={style.form__button} onClick={(e) => {
+            e.preventDefault();
+            registerUser(values.email, values.password)
+           }}>
              Sign up
            </button>
            <div className={style.form__sign}>

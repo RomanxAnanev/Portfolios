@@ -2,13 +2,17 @@ import React, { useState } from 'react'
 import style from './Login.module.css'
 import { Formik } from 'formik';
 import { NavLink } from 'react-router-dom'
+import { createClient } from '@supabase/supabase-js';
 
 export const Login = () => {
+
+  const supabase = createClient('https://ndnfqgznxmxuserdlhhl.supabase.co',"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5kbmZxZ3pueG14dXNlcmRsaGhsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDA0MDQwNjUsImV4cCI6MjAxNTk4MDA2NX0.XBHCk_KnwRYLHRGt3jqjdVrls5Y6x3Z-nX9YL4zIaAs" );
+ 
 
   const [type,setType] = useState('password')
   const [eye, setEye] = useState(style.showPassword)
   
-
+  
   const switchType = () =>{
     if(type === 'password'){
         setType('text')
@@ -51,8 +55,17 @@ export const Login = () => {
          return errors;
        }}
        onSubmit={(values, { setSubmitting }) => {
-         setTimeout(() => {
-           alert(JSON.stringify(values, null, 2));
+         setTimeout(async() => {
+           
+          const { data, error } = await supabase.auth.signInWithPassword({
+            email: values.email,
+            password: values.password,
+          })
+          
+          const { data: { user } } = await supabase.auth.getUser()
+             localStorage.setItem("email", values.email)
+             localStorage.setItem("id", user.id);
+            location.href = `${location.origin}/`
            setSubmitting(false);
          }, 400);
        }}

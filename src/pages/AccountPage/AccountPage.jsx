@@ -1,19 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import style from './AccountPage.module.css'
 import { Card } from '../../components/Card/Card'
 import { GoBackButton } from '../../components/GoBackButton/GoBackButton' 
 import { ResumeService } from '../../components/ResumeService/ResumeService'
 import { ZeroScroll } from '../../components/ZeroScroll/ZeroScroll'
 import { NavLink } from 'react-router-dom'
+import { createClient } from '@supabase/supabase-js';
 
 
 export const AccountPage = () => {
-
+    const supabase = createClient('https://ndnfqgznxmxuserdlhhl.supabase.co',"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5kbmZxZ3pueG14dXNlcmRsaGhsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDA0MDQwNjUsImV4cCI6MjAxNTk4MDA2NX0.XBHCk_KnwRYLHRGt3jqjdVrls5Y6x3Z-nX9YL4zIaAs" );
+ 
+    const email = localStorage.getItem("email");
+    const [user, setUser] = useState(null);
   ZeroScroll()
 
   const editPage = {
     src: '/EditProfile'
   }
+
+  useEffect(() => {
+    (async () => {
+        const { data, error } = await supabase
+        .from('users')
+        .select('*')
+        .eq("email", email);
+        setUser(data[0]);
+    })()
+    console.log(user);
+  }, [])
 
   return (
 
@@ -33,26 +48,30 @@ export const AccountPage = () => {
                     </div>
                     <div className={style.profile__text}>
                         <h1>
-                            Alexey Kuznetsov
+                            {user && user.name ? user.name : "no"}
                         </h1>
                         <h2>
-                            UX | UI Designer
+                            UX | UI Designer {user && user.profession ? user.profession : "no"}
                         </h2>
                     </div>
-                    <div className={style.button__edit}>
-                    <NavLink to = {editPage.src}>
-                            <img src="/editProfile.svg" alt="" />
-                    </NavLink>
-                    </div>
+                    {email && user && email === user.email && (
+                        <div className={style.button__edit}>
+                        <NavLink to = {editPage.src}>
+                                <img src="/editProfile.svg" alt="" />
+                        </NavLink>
+                        </div>
+                    )}
                     
                 </div>
                 <div className={style.content__desc}>
                     <p>
-                        People can leave their vacancies for employers to come out to them or find a person for a joint projectPeople can leave their vacancies for employers to come out to them or find a person for a joint project
+                        {user && user.description ? user.description : "no"}
                     </p>
                 </div>
                 <div className={style.resumeService}>
-                    <ResumeService />
+                    {user &&
+                    <ResumeService vk={user.vk} telegram={user.telegram} facebook={user.facebook} dribble={user.dribble} behance={user.behance} figma={user.figma} ps={user.ps} ai={user.ai} />
+                    }
                 </div>
             </div>
             

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Form } from 'react-bootstrap'; 
 import './SelectDropDown.css'
 
-export const SelectDropdownContact = () => { 
+export const SelectDropdownContact = ({contacts, setContacts, vk, telegram, facebook}) => { 
 
     const [select_Contacts, set_Select_Contacts] =  
         useState([]); 
@@ -65,14 +65,9 @@ export const SelectDropdownContact = () => {
                 </div> 
                 <div style={{ marginLeft: '20px', width: '50%' }}> 
                     <ul className='added__inputs'> 
-                        {select_Contacts.map((optionId) => ( 
-                            // <li key={optionId}> 
-                            //     {courses.find(option =>  
-                            //         option.id === optionId)?.label} 
-                            // </li> 
-                            <input className='added__input' type="url" key={optionId} placeholder='url' />
-                            
-                        ))} 
+                        {select_Contacts[0] && <input className='added__input' type="url" value={contacts.vk || vk} onChange={(e) => setContacts({...contacts, vk: e.target.value})} placeholder="Vkcontacte url" />}
+                        {select_Contacts[1] && <input className='added__input' type="url" value={contacts.tg || telegram} onChange={(e) => setContacts({...contacts, tg: e.target.value})} placeholder="Telegramm url" />}
+                        {select_Contacts[2] && <input className='added__input' type="url" value={contacts.fb || facebook} onChange={(e) => setContacts({...contacts, fb: e.target.value})} placeholder="Facebook url" />}
                     </ul> 
                 </div> 
             </div> 
