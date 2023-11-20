@@ -84,3 +84,105 @@
     cursor: pointer;
     margin-top: 20px;
 }
+
+
+.resume{
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+.resume__h1{
+    color: #01131E;
+    font-family: Clash Display;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 10px;
+}
+.resume__content{
+    display: flex;
+    gap: 20px;
+}
+.content__resumText{
+    width: 432px;
+    color: #01131E;
+    font-family: Clash Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.resume__h2{
+    color: #000;
+    font-family: Clash Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+.resume__label{
+    display: flex;
+    position: relative;
+}
+.resume__label__input{
+    border-radius: 10px;
+    border-top: 2px solid #01131E;
+    border-right: 2px solid #01131E;
+    border-bottom: 4px solid #01131E;
+    border-left: 2px solid #01131E;
+    background: #FFFFF3;
+    width: 248px;
+    height: 50px;
+    margin-right: 20px;
+    padding-left: 25px;
+    color: #01131E;
+    font-family: Clash Display;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.valute{
+    color: #5B6D78;
+    font-family: Clash Display;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: absolute;
+    top: 13px;
+    z-index: 2;
+    left: 10px;
+}
+.fromTo{
+    color: #5B6D78;
+    font-family: Clash Display;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: absolute;
+    top: 16px;
+    z-index: 2;
+    right: 194px;
+    word-spacing: 5px;
+}
+.resume__label__button{
+    color: #01131E;
+    font-family: Clash Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 8px;
+    border-top: 2px solid #000;
+    border-right: 2px solid #000;
+    border-bottom: 4px solid #000;
+    border-left: 2px solid #000;
+    background: #FEDE65;
+    height: 50px;
+    width: 164px;
+    cursor: pointer;
+}

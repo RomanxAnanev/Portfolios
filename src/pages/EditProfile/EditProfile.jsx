@@ -5,6 +5,7 @@ import { SelectDropdownContact } from "../../components/SelectDropDown/SelectDro
 import { SelectDropdownProject } from "../../components/SelectDropDown/SelectDropDownProject";
 import { SelectDropdownStack } from "../../components/SelectDropDown/SelectDropDownStack";
 import { createClient } from '@supabase/supabase-js';
+import { Resume } from '../../components/Resume/Resume';
 
 export const EditProfile = () => {
   const supabase = createClient('https://ndnfqgznxmxuserdlhhl.supabase.co',"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5kbmZxZ3pueG14dXNlcmRsaGhsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDA0MDQwNjUsImV4cCI6MjAxNTk4MDA2NX0.XBHCk_KnwRYLHRGt3jqjdVrls5Y6x3Z-nX9YL4zIaAs" );
@@ -76,7 +77,22 @@ const [description, setDescription] = useState("");
         </div>
         <button className={style.button} type='button' onClick={onSubmit}>Confirm</button>
       </label>
-
+      <div className={style.resume}>
+        <h1 className={style.resume__h1}>Yuor resume:</h1>
+        <div className={style.resume__content}>
+          <Resume />
+          <div className={style.content__resumText}>
+            <p>The resume card is generated automatically, it remains only to enter the average cost of your service and click publish. You can also publish a resume card on the resumes page</p>
+            <h2 className={style.resume__h2}>Average price:</h2>
+            <label className={style.resume__label} htmlFor="">
+              <input className={style.resume__label__input} type="text" />
+              <div className={style.valute}>$</div>
+              <div className={style.fromTo}>From $1 to $999</div>
+              <button className={style.resume__label__button} type='button'>Add resume</button>
+            </label>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

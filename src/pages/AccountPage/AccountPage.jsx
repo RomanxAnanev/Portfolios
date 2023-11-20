@@ -48,10 +48,10 @@ export const AccountPage = () => {
                     </div>
                     <div className={style.profile__text}>
                         <h1>
-                            {user && user.name ? user.name : "no"}
+                            {user && user.name ? user.name : "Your name"}
                         </h1>
                         <h2>
-                            UX | UI Designer {user && user.profession ? user.profession : "no"}
+                            {user && user.profession ? user.profession : "Your profession"}
                         </h2>
                     </div>
                     {email && user && email === user.email && (
@@ -65,7 +65,7 @@ export const AccountPage = () => {
                 </div>
                 <div className={style.content__desc}>
                     <p>
-                        {user && user.description ? user.description : "no"}
+                        {user && user.description ? user.description : "Your description"}
                     </p>
                 </div>
                 <div className={style.resumeService}>
