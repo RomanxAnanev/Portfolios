@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Form } from 'react-bootstrap'; 
 import './SelectDropDown.css'
 
-export const SelectDropdownProject = ({projects, setProjects, dribble, behance}) => { 
+export const SelectDropdownProject = ({projects, setProjects}) => {
 
     const [select_Courses, set_Select_Courses] =  
         useState([]); 
@@ -64,8 +64,8 @@ export const SelectDropdownProject = ({projects, setProjects, dribble, behance})
                 </div> 
                 <div style={{ marginLeft: '20px', width: '50%' }}> 
                     <ul className='added__inputs'> 
-                    {select_Courses[0] && <input className='added__input' type="url" value={projects.dribble || dribble} onChange={(e) => setProjects({...projects, dribble: e.target.value})} placeholder={`${project[0].label} url`} />}
-                        {select_Courses[1] && <input className='added__input' type="url" value={projects.behance || behance} onChange={(e) => setProjects({...projects, behance: e.target.value})} placeholder={`${project[1].label} url`} />}
+                    {select_Courses[0] && <input className='added__input' type="url" value={projects.dribble} onChange={(e) => setProjects({...projects, dribble: e.target.value})} placeholder={`${project[0].label} url`} />}
+                        {select_Courses[1] && <input className='added__input' type="url" value={projects.behance} onChange={(e) => setProjects({...projects, behance: e.target.value})} placeholder={`${project[1].label} url`} />}
                     </ul> 
                 </div> 
             </div> 

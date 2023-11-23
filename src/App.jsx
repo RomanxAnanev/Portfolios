@@ -48,7 +48,7 @@ function App() {
         </Layout>,
     },
     {
-      path: "/ProjectPage",
+      path: "/ProjectPage/:id",
       element:
         <Layout>
           <ProjectPage/>

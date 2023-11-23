@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Form } from 'react-bootstrap'; 
 import './SelectDropDown.css'
 
-export const SelectDropdownStack = ({stackValue, setStack, figma, ps, ai}) => { 
+export const SelectDropdownStack = ({stackValue, setStack}) => {
 
     const [select_Courses, set_Select_Courses] =  
         useState([]); 
@@ -65,9 +65,9 @@ export const SelectDropdownStack = ({stackValue, setStack, figma, ps, ai}) => {
                 </div> 
                 <div style={{ marginLeft: '20px', width: '50%' }}> 
                     <ul className='added__inputs'> 
-                    {select_Courses[0] && <input className='added__input' type="url" value={stackValue.figma || figma} onChange={(e) => setStack({...stackValue, figma: e.target.value})} placeholder={`${stack[0].label} url`} />}
-                        {select_Courses[1] && <input className='added__input' type="url" value={stackValue.ps || ps} onChange={(e) => setStack({...stackValue, ps: e.target.value})} placeholder={`${stack[1].label} url`} />}
-                        {select_Courses[2] && <input className='added__input' type="url" value={stackValue.ai || ai} onChange={(e) => setStack({...stackValue, ai: e.target.value})} placeholder={`${stack[2].label} url`} />}
+                    {select_Courses[0] && <input className='added__input' type="url" value={stackValue.figma} onChange={(e) => setStack({...stackValue, figma: e.target.value})} placeholder={`${stack[0].label} url`} />}
+                        {select_Courses[1] && <input className='added__input' type="url" value={stackValue.ps} onChange={(e) => setStack({...stackValue, ps: e.target.value})} placeholder={`${stack[1].label} url`} />}
+                        {select_Courses[2] && <input className='added__input' type="url" value={stackValue.ai} onChange={(e) => setStack({...stackValue, ai: e.target.value})} placeholder={`${stack[2].label} url`} />}
                     </ul> 
                 </div> 
             </div> 

@@ -2,13 +2,13 @@ import React, { useState } from 'react'
 import { Form } from 'react-bootstrap'; 
 import './SelectDropDown.css'
 
-export const SelectDropdownContact = ({contacts, setContacts, vk, telegram, facebook}) => { 
+export const SelectDropdownContact = ({contacts, setContacts}) => {
 
     const [select_Contacts, set_Select_Contacts] =  
         useState([]); 
     const [isOpenContacts, setIsOpenContacts] = useState(false); 
     const contact = [ 
-        { id: 1, label: 'Vkantacte' }, 
+        { id: 1, label: 'Vkcontacte' },
         { id: 2, label: 'Telegram' }, 
         { id: 3, label: 'FaceBook' }, 
     ]; 
@@ -65,9 +65,9 @@ export const SelectDropdownContact = ({contacts, setContacts, vk, telegram, face
                 </div> 
                 <div style={{ marginLeft: '20px', width: '50%' }}> 
                     <ul className='added__inputs'> 
-                        {select_Contacts[0] && <input className='added__input' type="url" value={contacts.vk || vk} onChange={(e) => setContacts({...contacts, vk: e.target.value})} placeholder="Vkcontacte url" />}
-                        {select_Contacts[1] && <input className='added__input' type="url" value={contacts.tg || telegram} onChange={(e) => setContacts({...contacts, tg: e.target.value})} placeholder="Telegramm url" />}
-                        {select_Contacts[2] && <input className='added__input' type="url" value={contacts.fb || facebook} onChange={(e) => setContacts({...contacts, fb: e.target.value})} placeholder="Facebook url" />}
+                        {select_Contacts[0] && <input className='added__input' type="url" value={contacts.vk} onChange={(e) => setContacts({...contacts, vk: e.target.value})} placeholder="Vkcontacte url" />}
+                        {select_Contacts[1] && <input className='added__input' type="url" value={contacts.tg} onChange={(e) => setContacts({...contacts, tg: e.target.value})} placeholder="Telegramm url" />}
+                        {select_Contacts[2] && <input className='added__input' type="url" value={contacts.fb} onChange={(e) => setContacts({...contacts, fb: e.target.value})} placeholder="Facebook url" />}
                     </ul> 
                 </div> 
             </div> 
