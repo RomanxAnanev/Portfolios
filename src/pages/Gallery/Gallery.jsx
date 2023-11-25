@@ -1,8 +1,7 @@
-import React, {useEffect, useState} from 'react'
+import {useEffect, useState} from 'react'
 import style from './Gallery.module.css'
 import {Search} from '../../components/Search/Search'
 import {Card} from '../../components/Card/Card'
-import {NavLink} from 'react-router-dom'
 import {ZeroScroll} from '../../components/ZeroScroll/ZeroScroll'
 import {createClient} from "@supabase/supabase-js";
 
@@ -76,7 +75,7 @@ export const Gallery = () => {
             :
             !!works.length ?
               works.map(work => (
-                <Card key={work.id} id={work.id} username={work.username} likes={work.likes}/>
+                <Card key={work.id} id={work.id} idUser={work.user_id} username={work.username} likes={work.count}/>
               ))
               :
               <h3>Not found</h3>

@@ -35,7 +35,7 @@ export const Home = () => {
       const {data} = await supabase
         .from('resumes')
         .select('*')
-        .range(0, 2);
+        .range(1, 3);
 
       setResume(data);
     } catch (e) {
@@ -110,7 +110,7 @@ export const Home = () => {
               <h3>Loading...</h3>
               :
               resume[0] &&
-              <Resume name={resume[0].name} profession={resume[0].profession} behance={resume[0].behance}
+              <Resume name={resume[0].name} avatar={resume[0].user_avatar} profession={resume[0].profession} behance={resume[0].behance}
                       ai={resume[0].ai} telegram={resume[0].telegram} dribble={resume[0].dribble}
                       facebook={resume[0].facebook} avgPrice={resume[0].price} figma={resume[0].figma} ps={resume[0].ps}
                       vk={resume[0].vk} user_id={resume[0].user_id}/>
@@ -172,11 +172,11 @@ export const Home = () => {
             <h3>Loading...</h3>
             :
             <>
-              {resume[0] && <Resume name={resume[0].name} profession={resume[0].profession} behance={resume[0].behance}
+              {resume[0] && <Resume name={resume[0].name} avatar={resume[0].user_avatar} profession={resume[0].profession} behance={resume[0].behance}
                                     ai={resume[0].ai} telegram={resume[0].telegram} dribble={resume[0].dribble}
                                     facebook={resume[0].facebook} avgPrice={resume[0].price} figma={resume[0].figma}
                                     ps={resume[0].ps} vk={resume[0].vk} user_id={resume[0].user_id}/>}
-              {resume[1] && <Resume name={resume[1].name} profession={resume[1].profession} behance={resume[1].behance}
+              {resume[1] && <Resume name={resume[1].name} avatar={resume[1].user_avatar} profession={resume[1].profession} behance={resume[1].behance}
                                     ai={resume[1].ai} telegram={resume[1].telegram} dribble={resume[1].dribble}
                                     facebook={resume[1].facebook} avgPrice={resume[1].price} figma={resume[1].figma}
                                     ps={resume[1].ps} vk={resume[1].vk} user_id={resume[1].user_id}/>}

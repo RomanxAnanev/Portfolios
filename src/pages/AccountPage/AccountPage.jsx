@@ -69,11 +69,6 @@ export const AccountPage = () => {
         <img className={style.content__img} src="/AccountImage.png" alt=""/>
         <div className={style.content__author}>
           <div className={style.author__profile}>
-            <div className={style.profile__wrapper}>
-              <div className={style.profile__bgImg}>
-                <img className={style.profile__img} src="/Rectangle 6122.png" alt=""/>
-              </div>
-            </div>
             <div className={style.profile__text}>
               <h1>
                 {user && user.name ? user.name : "Your name"}
@@ -111,7 +106,7 @@ export const AccountPage = () => {
           :
           !!works.length ?
             works.map(work => (
-              <Card key={work.id} id={work.id} username={work.username} likes={work.likes}/>
+              <Card key={work.id} id={work.id} idUser={work.user_id} username={work.username} likes={work.count}/>
             ))
             :
             <h3>Not found</h3>

@@ -7,16 +7,18 @@ export const ResumeService = ({vk, telegram, facebook, dribble, behance, figma, 
             <div className="service__contacts services">
                 <p>Contacts:</p>
                 <div className='contacts__services serviceImg'>
-                    {vk && <img src="/vk.svg" alt="" />}
-                    {telegram && <img src="/telegram.svg" alt="" />}
-                    {facebook && <img src="/twitter.svg" alt="" />}
+                    {vk && <a href={`${vk}`}><img src="/vk.svg" alt="" /></a>}
+                    {telegram && <a href={`${telegram}`}><img src="/telegram.svg" alt="" /></a>}
+                    {facebook && <a href={`${facebook}`}><img src="/twitter.svg" alt="" /></a>}
                 </div>
             </div>
             <div className="service__projects services">
                 <p>Projects:</p>
                 <div className='projects__services serviceImg'>
-                    {dribble && <img src="/Dribble.svg" alt="" />}
-                    {behance && <img src="/Behance.svg" alt="" />}
+                    {dribble && <a href={`${dribble}`}>
+                        <img src="/Dribble.svg" alt="" />
+                    </a>}
+                    {behance && <a href={`${behance}`}><img src="/Behance.svg" alt="" /></a>}
 
                 </div>
             </div>

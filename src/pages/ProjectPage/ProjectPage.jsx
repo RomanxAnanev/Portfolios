@@ -4,7 +4,7 @@ import {ResumeService} from '../../components/ResumeService/ResumeService'
 import {GoBackButton} from '../../components/GoBackButton/GoBackButton'
 import {ZeroScroll} from '../../components/ZeroScroll/ZeroScroll'
 import {createClient} from "@supabase/supabase-js";
-import {useParams} from "react-router-dom";
+import {NavLink, useParams} from "react-router-dom";
 
 export const ProjectPage = () => {
   const supabase = createClient('https://ndnfqgznxmxuserdlhhl.supabase.co', "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5kbmZxZ3pueG14dXNlcmRsaGhsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDA0MDQwNjUsImV4cCI6MjAxNTk4MDA2NX0.XBHCk_KnwRYLHRGt3jqjdVrls5Y6x3Z-nX9YL4zIaAs");
@@ -77,21 +77,25 @@ export const ProjectPage = () => {
               </div>
               <div className={style.projectPage__content}>
                 <div className={style.content__img}>
-                  <img src="/Rectangle 59.png" alt=""/>
+                  <a href={`${work.url}`}>
+                    <img src={work.img_path} alt=""/>
+                  </a>
                 </div>
                 <div className={style.content__author}>
                   <div className={style.author__profile}>
                     <div className={style.profile__wrapper}>
                       <div className={style.profile__bgImg}>
-                        <img className={style.profile__img} src="/Rectangle 6122.png" alt=""/>
+                        <img className={style.profile__img} src={work.user_avatar} alt=""/>
                       </div>
                     </div>
                     <div className={style.profile__text}>
                       <h1>
-                        {user.name}
+                        <NavLink to={`${location.origin}/AccountPage/${user.id}`}>
+                          {work.username}
+                        </NavLink>
                       </h1>
                       <h2>
-                        {user.profession}
+                        {work.profession}
                       </h2>
                     </div>
                   </div>

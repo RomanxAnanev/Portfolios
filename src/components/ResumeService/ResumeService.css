@@ -17,6 +17,15 @@
     display: flex;
     vertical-align: middle;
 }
+.serviceImg > a{
+     margin-right: 10px;
+     width: 24px;
+     height: 24px;
+ }
+.serviceImg > a:last-child{
+    margin-right: 0px;
+}
+
 .serviceImg > img{
     margin-right: 10px;
     width: 24px;
