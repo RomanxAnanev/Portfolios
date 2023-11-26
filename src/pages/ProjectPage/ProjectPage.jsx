@@ -34,18 +34,20 @@ export const ProjectPage = () => {
   };
 
   const getUser = async () => {
-    try {
-      setLoadingUser(true);
-      const {data} = await supabase
-        .from('users')
-        .select('*')
-        .eq("email", email);
+    if (work) {
+      try {
+        setLoadingUser(true);
+        const {data} = await supabase
+            .from('users')
+            .select('*')
+            .eq("id", work.user_id);
 
-      setUser(data[0]);
-    } catch (e) {
-      console.log(e);
-    } finally {
-      setLoadingUser(false);
+        setUser(data[0]);
+      } catch (e) {
+        console.log(e);
+      } finally {
+        setLoadingUser(false);
+      }
     }
   };
 
@@ -55,6 +57,16 @@ export const ProjectPage = () => {
       await getUser();
     })();
   }, [id]);
+
+  useEffect(() => {
+    (async () => {
+      await getUser();
+    })();
+  }, [work]);
+
+  useEffect(() => {
+    console.log(work)
+  }, [work])
 
   return (
     <div className={style.projectPage}>
@@ -90,7 +102,7 @@ export const ProjectPage = () => {
                     </div>
                     <div className={style.profile__text}>
                       <h1>
-                        <NavLink to={`${location.origin}/AccountPage/${user.id}`}>
+                        <NavLink to={`${location.origin}/AccountPage/${work.user_id}`}>
                           {work.username}
                         </NavLink>
                       </h1>

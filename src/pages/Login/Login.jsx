@@ -9,8 +9,8 @@ export const Login = () => {
   const supabase = createClient('https://ndnfqgznxmxuserdlhhl.supabase.co', "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5kbmZxZ3pueG14dXNlcmRsaGhsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDA0MDQwNjUsImV4cCI6MjAxNTk4MDA2NX0.XBHCk_KnwRYLHRGt3jqjdVrls5Y6x3Z-nX9YL4zIaAs");
 
   const [type, setType] = useState('password')
+  const [error, setError] = useState('')
   const [eye, setEye] = useState(style.showPassword)
-
 
   const switchType = () => {
     if (type === 'password') {
@@ -58,7 +58,12 @@ export const Login = () => {
             const {data, error} = await supabase.auth.signInWithPassword({
               email: values.email,
               password: values.password,
-            })
+            });
+
+            if (error) {
+                setError(error.message);
+                return console.log(error.message);
+            }
 
             const {data: data3} = await supabase
               .from('users')
@@ -115,9 +120,11 @@ export const Login = () => {
                 onBlur={handleBlur}
                 value={values.password}
               />
+
               <button className={eye} onClick={switchType}></button>
               <div className={style.error}>
                 {errors.password && touched.password && errors.password}
+                  {error}
               </div>
             </label>
 
