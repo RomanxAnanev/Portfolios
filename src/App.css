@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: Clash Display, Roboto;
+    zoom: 100%;
 }
 
 button {
@@ -28,4 +29,9 @@ button {
     max-width: 1180px;
     width: 100%;
     margin-top: 40px;
+}
+@media screen and (width < 1440){
+    *{
+        zoom: 95%;
+    }
 }

@@ -144,7 +144,7 @@ export const EditProfile = () => {
                             <input className={style.resume__label__input} maxLength={4} value={avgPrice}
                                    onChange={(e) => setAvgPrice(e.target.value)} type="text"/>
                             <div className={style.valute}>$</div>
-                            <div className={style.fromTo}>From $1 to $999</div>
+                            <div className={style.fromTo}>From $1 to $9999</div>
                             <button className={style.resume__label__button} type='button' onClick={patchResume}>Add
                                 resume
                             </button>
