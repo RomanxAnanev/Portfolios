@@ -106,6 +106,7 @@ export const Home = () => {
             People can leave their resumes for employers to come out to them or find a person for a joint project
           </p>
           <div className='resumes__resume'>
+            <h3 className='resumes__resume_title'>last resume</h3>
             {loading ?
               <h3>Loading...</h3>
               :
@@ -220,11 +221,15 @@ export const Home = () => {
                 </button>
               </NavLink>
 
-              <NavLink to={addProjectPage.src}>
-                <button className='gallarySection__content__buttons__share'>
-                  {addProjectPage.name}
-                </button>
-              </NavLink>
+              <button className='gallarySection__content__buttons__share' onClick={() => {
+                if (email) {
+                  return location.href = `${location.origin}/AddProjectPage`;
+                }
+      
+                location.href = `${location.origin}/LogIn`;
+                }}>
+                {addProjectPage.name}
+              </button>
 
             </div>
           </div>
