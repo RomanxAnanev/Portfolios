@@ -66,7 +66,8 @@ export const AccountPage = () => {
       <GoBackButton/>
 
       <div className={style.accountPage__content}>
-        <img className={style.content__img} src="/AccountImage.png" alt=""/>
+        <img className={style.content__img} src={user.avatar} alt=""/>
+
         <div className={style.content__author}>
           <div className={style.author__profile}>
             <div className={style.profile__text}>

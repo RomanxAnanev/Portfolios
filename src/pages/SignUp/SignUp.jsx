@@ -3,6 +3,8 @@ import style from './SignUp.module.css'
 import {Formik} from 'formik';
 import {NavLink} from 'react-router-dom'
 import {createClient} from '@supabase/supabase-js';
+import {RandomIndexArray} from '../../../func/random-index-array'
+import {images_links} from '../../../const/index'
 
 
 export const SignUp = () => {

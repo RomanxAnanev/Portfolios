@@ -1,4 +1,4 @@
-const images_links = ["https://ndnfqgznxmxuserdlhhl.supabase.co/storage/v1/object/public/images/av1.svg",
+export const images_links = ["https://ndnfqgznxmxuserdlhhl.supabase.co/storage/v1/object/public/images/av1.svg",
 
     "https://ndnfqgznxmxuserdlhhl.supabase.co/storage/v1/object/public/images/av2.svg",
 
