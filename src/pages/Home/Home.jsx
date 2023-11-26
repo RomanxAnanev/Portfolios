@@ -90,7 +90,7 @@ export const Home = () => {
                 </div>
               </div>
             </div>
-            <div>
+            <div className='banner__button__dsa'>
               <NavLink to={gallery.src}>
                 <button className='banner__button'>
                   {gallery.name}
@@ -147,7 +147,7 @@ export const Home = () => {
               <img className='secondSecSquare' src="/SecondSecsquare.svg" alt=""/>
             </div>
             <div className="avatar__secondSeactionSocBG">
-              <img className='secondSeactionSocBG__img' src="/Section2AvaterSoc.svg" alt=""/>
+              <img className='secondSeactionSocBG__img secondSeactionSocBG__img__adaptive' src="/Section2AvaterSoc.svg" alt=""/>
             </div>
             <div className="avatar__buttons">
               <button className='avatar__buttons__create' onClick={() => {

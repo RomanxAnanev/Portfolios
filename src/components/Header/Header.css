@@ -81,5 +81,61 @@ a{
         opacity: 1;
     }
 
+}
 
+@media screen and (max-width: 880px){
+    .header{
+        display: flex;
+        justify-content: space-between;
+        background-color: #FFFFF3;
+        border-radius: 0px;
+        border-top: 0px solid #01131E;
+        border-right: 0px solid #01131E;
+        border-bottom: 4px solid #01131E;
+        border-left: 0px solid #01131E;
+        font-family: 'Clash Grotesk', sans-serif;
+        width: 880px;
+        height: 93px;
+        margin-top: 0px;
+    }
+    .header__logo{
+        margin-top: -10px;
+        transform: scale(80%);
+    }
+    .menu{
+        display: flex;
+        color: #01131E;
+        list-style: none;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-right: 0px;
+        cursor: pointer;
+        gap: 15px;
+    }
+    .nav__login{
+        display: none;
+    }
+    .header__li_Active {
+        color: #FFFFFF;
+        background-color: #01131E;
+        border-radius: 4px;
+        position: relative;
+    
+        &::after {
+            content: '';
+            border: 1px solid #01131E;
+            border-radius: 4px;
+            top: 4px;
+            left: 4px;
+            width: calc(100%);
+            height: calc(100%);
+            position: absolute;
+            transition: all 0.3s ease; 
+            opacity: 1;
+            display: none;
+        }
+    
+    }
 }

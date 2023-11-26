@@ -109,7 +109,7 @@ export const AccountPage = () => {
               <Card key={work.id} id={work.id} idUser={work.user_id} username={work.username} likes={work.count}/>
             ))
             :
-            <h3>Not found</h3>
+            <h3>The user has no published projects</h3>
         }
       </div>
     </div>
