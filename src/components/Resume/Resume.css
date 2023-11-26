@@ -13,11 +13,14 @@
     background: url(ResumeSquare.svg) no-repeat 215px 65px
     color(srgb 255 255 243);
 }
-.profile__avatar{
+.profile__avatar > img {
     margin-left: 15px;
     margin-top: 10px;
     object-fit: fill;
     border-right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
 }
 .resume__profile{
     display: flex;

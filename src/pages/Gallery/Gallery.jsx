@@ -75,7 +75,7 @@ export const Gallery = () => {
             :
             !!works.length ?
               works.map(work => (
-                <Card key={work.id} id={work.id} idUser={work.user_id} username={work.username} likes={work.count}/>
+                <Card key={work.id} avatar={work.user_avatar} id={work.id} idUser={work.user_id} username={work.username} likes={work.count}/>
               ))
               :
               <h3>Not found</h3>

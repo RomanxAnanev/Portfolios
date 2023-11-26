@@ -3,7 +3,7 @@ import style from './Card.module.css'
 import {NavLink} from 'react-router-dom'
 import {createClient} from "@supabase/supabase-js";
 
-export const Card = ({id, username, likes, idUser}) => {
+export const Card = ({id, username, likes, idUser, avatar}) => {
     const supabase = createClient('https://ndnfqgznxmxuserdlhhl.supabase.co', "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5kbmZxZ3pueG14dXNlcmRsaGhsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDA0MDQwNjUsImV4cCI6MjAxNTk4MDA2NX0.XBHCk_KnwRYLHRGt3jqjdVrls5Y6x3Z-nX9YL4zIaAs");
 
     const [count, setCount] = useState(0);
@@ -68,7 +68,7 @@ export const Card = ({id, username, likes, idUser}) => {
 
             <div className={style.card__content}>
                 <div className={style.content__author}>
-                    <img className={style.author__image} src="/AccountImage.png" alt=""/>
+                    <img className={style.author__image} src={avatar} alt=""/>
                     <h1 className={style.author__name}>
                         <NavLink to={`${location.origin}/AccountPage/${idUser}`}>
                             {username}

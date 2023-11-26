@@ -68,7 +68,7 @@ export const Resumes = () => {
                     :
                     !!resumes.length ?
                         resumes.map(resume => (
-                            <Resume key={resume.id} user_id={resume.user_id} facebook={resume.facebook}
+                            <Resume key={resume.id} avatar={resume.user_avatar} user_id={resume.user_id} facebook={resume.facebook}
                                     dribble={resume.dribble} telegram={resume.telegram} behance={resume.behance}
                                     ai={resume.ai} vk={resume.vk} ps={resume.ps} figma={resume.figma}
                                     avgPrice={resume.price} profession={resume.profession} name={resume.name}/>

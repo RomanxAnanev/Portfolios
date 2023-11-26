@@ -66,7 +66,7 @@ export const AccountPage = () => {
       <GoBackButton/>
 
       <div className={style.accountPage__content}>
-        <img className={style.content__img} src={user.avatar} alt=""/>
+        {user &&  <img className={style.content__img} src={user.avatar} alt=""/>}
 
         <div className={style.content__author}>
           <div className={style.author__profile}>
@@ -107,7 +107,7 @@ export const AccountPage = () => {
           :
           !!works.length ?
             works.map(work => (
-              <Card key={work.id} id={work.id} idUser={work.user_id} username={work.username} likes={work.count}/>
+              <Card key={work.id} avatar={work.user_avatar} id={work.id} idUser={work.user_id} username={work.username} likes={work.count}/>
             ))
             :
             <h3>The user has no published projects</h3>

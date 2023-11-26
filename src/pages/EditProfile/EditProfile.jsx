@@ -99,7 +99,7 @@ export const EditProfile = () => {
             <GoBackButton/>
 
             <div className={style.editProfile__content}>
-                <img className={style.profile__img} src="/AccountImage.png" alt=""/>
+                {avatar && <img className={style.profile__img} src={avatar} alt=""/>}
                 <label className={style.inputs} htmlFor="">
                     <h1 className={style.input__title}>Name</h1>
                     {user && <input type="text" onChange={(e) => setName(e.target.value)} value={name}/>}
@@ -135,7 +135,7 @@ export const EditProfile = () => {
             <div className={style.resume}>
                 <h1 className={style.resume__h1}>Your resume:</h1>
                 <div className={style.resume__content}>
-                    <Resume name={name} avgPrice={avgPrice} profession={profession} vk={contacts.vk} ai={stack.ai}
+                    <Resume name={name} avatar={avatar} avgPrice={avgPrice} profession={profession} vk={contacts.vk} ai={stack.ai}
                             dribble={projects.dribble} behance={projects.behance} figma={stack.figma} ps={stack.ps}
                             telegram={contacts.tg} facebook={contacts.fb}/>
                     <div className={style.content__resumText}>

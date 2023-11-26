@@ -4,7 +4,7 @@ import { ResumeService } from  '../ResumeService/ResumeService.jsx'
 import { NavLink } from 'react-router-dom'
 
 
-export const Resume = ({user_id, name, profession, vk, facebook, telegram, figma, ai, ps, dribble, behance, avgPrice }) => {
+export const Resume = ({user_id, avatar, name, profession, vk, facebook, telegram, figma, ai, ps, dribble, behance, avgPrice }) => {
     const projectPage = 
     {  
         src: '/AccountPage',
@@ -15,7 +15,7 @@ export const Resume = ({user_id, name, profession, vk, facebook, telegram, figma
         <div>
             <div className="resume__profile">
                 <div className="profile__avatar">
-                    <img src="avatar.png" alt="" />
+                    <img src={avatar} alt="" />
                 </div>
                 <div className="profile__info">
                     <h1 className="info__name">
