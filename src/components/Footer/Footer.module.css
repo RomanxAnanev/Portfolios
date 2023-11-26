@@ -34,6 +34,8 @@
     gap: 20px;
     margin-top: 30px;
 }
+
+
 @media screen and (max-width: 880px){
     .footer{
         display: flex;
@@ -64,5 +66,8 @@
         margin-right: 0px;
         cursor: pointer;
         gap: 15px;
+    }
+    .nav__list{
+        margin-top: 10px;
     }
 }

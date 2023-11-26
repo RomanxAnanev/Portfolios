@@ -147,7 +147,8 @@ export const Home = () => {
               <img className='secondSecSquare' src="/SecondSecsquare.svg" alt=""/>
             </div>
             <div className="avatar__secondSeactionSocBG">
-              <img className='secondSeactionSocBG__img secondSeactionSocBG__img__adaptive' src="/Section2AvaterSoc.svg" alt=""/>
+              <img className='secondSeactionSocBG__img' src="/Section2AvaterSoc.svg" alt=""/>
+              <img className='secondSeactionSocBG__img__adaptive' src="/adaptive.svg" alt="" />
             </div>
             <div className="avatar__buttons">
               <button className='avatar__buttons__create' onClick={() => {
