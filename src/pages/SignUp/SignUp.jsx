@@ -20,7 +20,6 @@ export const SignUp = () => {
     }
   }
 
-
   // роутинг 
   const login =
     {
@@ -36,6 +35,8 @@ export const SignUp = () => {
 
   // регистрация
   const registerUser = async (email, password) => {
+      const image = RandomIndexArray(images_links);
+
     const {data, error} = await supabase.auth.signUp({
       email: email,
       password: password,
@@ -43,7 +44,7 @@ export const SignUp = () => {
 
     const {data: data2} = await supabase
       .from('users')
-      .insert({email: email});
+      .insert({email: email, avatar: image});
 
     const {data: data3} = await supabase
       .from('users')
@@ -55,6 +56,7 @@ export const SignUp = () => {
       .insert({
         user_id: data3[0].id,
         email: email,
+          user_avatar: image
       });
 
     location.href = `${location.origin}/`;
