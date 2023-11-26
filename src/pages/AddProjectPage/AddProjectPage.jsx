@@ -16,6 +16,7 @@ export const AddProjectPage = () => {
         url: "",
     });
     const [username, setUsername] = useState("");
+    const [avatar, setAvatar] = useState("");
     const [userProfession, setUserProfession] = useState("");
 
     ZeroScroll();
@@ -31,7 +32,8 @@ export const AddProjectPage = () => {
                     direction: work.direction,
                     url: work.url,
                     profession: userProfession,
-                    username: username
+                    username: username,
+                    user_avatar: avatar
                 });
 
             location.href = `${location.origin}/Gallery`;
@@ -49,6 +51,7 @@ export const AddProjectPage = () => {
 
             setUserProfession(data[0].profession);
             setUsername(data[0].name);
+            setAvatar(data[0].avatar);
         })();
     }, []);
 

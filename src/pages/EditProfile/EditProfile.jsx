@@ -12,6 +12,7 @@ export const EditProfile = () => {
     const [user, setUser] = useState(null);
     const [name, setName] = useState("");
     const [profession, setProfession] = useState("");
+    const [avatar, setAvatar] = useState("");
     const [description, setDescription] = useState("");
     const [avgPrice, setAvgPrice] = useState(0);
 
@@ -37,7 +38,7 @@ export const EditProfile = () => {
                 figma: stack.figma,
                 ps: stack.ps,
                 ai: stack.ai,
-                price: +avgPrice
+                price: +avgPrice,
             })
             .eq('email', email);
 
@@ -60,7 +61,8 @@ export const EditProfile = () => {
                 ps: stack.ps,
                 ai: stack.ai,
                 price: +avgPrice,
-                visible: true
+                visible: true,
+                user_avatar: avatar
             })
             .eq('email', email);
 
@@ -87,6 +89,7 @@ export const EditProfile = () => {
             setContacts({vk: data[0].vk, tg: data[0].telegram, fb: data[0].facebook})
             setProjects({dribble: data[0].dribble, behance: data[0].behance})
             setStack({figma: data[0].figma, ps: data[0].ps, ai: data[0].ai})
+            setAvatar(data[0].avatar);
         })()
     }, [])
 
