@@ -61,7 +61,7 @@ export const AddProjectPage = () => {
             <GoBackButton/>
 
             <div className={style.addProjectPage__content}>
-                <img className={style.project__img} src="/AccountImage.png" alt=""/>
+                <img className={style.project__img} src="/cardImage.png" alt=""/>
                 <label className={style.inputs} htmlFor="">
                     <h1 className={style.input__title}>Project name</h1>
                     <input type="text" value={work.name} onChange={(e) => setWork({...work, name: e.target.value})}/>
