@@ -14,7 +14,9 @@ export const AddProjectPage = () => {
         description: "",
         profession: "",
         url: "",
+        preview: "",
     });
+    console.log(work)
     const [username, setUsername] = useState("");
     const [avatar, setAvatar] = useState("");
     const [userProfession, setUserProfession] = useState("");
@@ -33,7 +35,8 @@ export const AddProjectPage = () => {
                     url: work.url,
                     profession: userProfession,
                     username: username,
-                    user_avatar: avatar
+                    user_avatar: avatar,
+                    img_path: work.preview
                 });
 
             location.href = `${location.origin}/Gallery`;
@@ -61,16 +64,19 @@ export const AddProjectPage = () => {
             <GoBackButton/>
 
             <div className={style.addProjectPage__content}>
-                <img className={style.project__img} src="/cardImage.png" alt=""/>
+                <img className={style.project__img} src={work.preview || work.img_path} alt=""/>
                 <label className={style.inputs} htmlFor="">
                     <h1 className={style.input__title}>Project name</h1>
-                    <input type="text" value={work.name} onChange={(e) => setWork({...work, name: e.target.value})}/>
+                    <input type="text" value={work.name} onChange={(e) => setWork({...work, name: e.target.value})} required/>
                     <h1 className={style.input__title}>Direction</h1>
                     <input type="text" value={work.direction}
-                           onChange={(e) => setWork({...work, direction: e.target.value})}/>
+                           onChange={(e) => setWork({...work, direction: e.target.value})} required/>
                     <h1 className={style.input__title}>Description</h1>
                     <input type="text" value={work.description}
-                           onChange={(e) => setWork({...work, description: e.target.value})}/>
+                           onChange={(e) => setWork({...work, description: e.target.value})} required/>
+                           <h1 className={style.input__title}>Preview Url</h1>
+                    <input type="text" value={work.preview}
+                           onChange={(e) => setWork({...work, preview: e.target.value})} required/>
                 </label>
             </div>
             <label className={style.url} htmlFor="">
