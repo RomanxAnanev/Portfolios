@@ -108,7 +108,7 @@ line-height: normal;
     right: 2px;
     width: 80px;
     height: 80px;
-    object-fit: fill;
+    object-fit: cover;
 }
 .content__desc{
     max-width: 580px;

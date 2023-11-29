@@ -51,7 +51,7 @@ export const Header = () => {
             <ul className='menu'>
               {menu.map(item => (
                 <NavLink to={item.src} key={item.name}
-                         className={({isActive}) => isActive ? "header__li header__li_Active" : "header__li"}>
+                className={({isActive}) => isActive ? "header__li header__li_Active" : "header__li"}>
                   <div>
                     {item.name}
                   </div>
