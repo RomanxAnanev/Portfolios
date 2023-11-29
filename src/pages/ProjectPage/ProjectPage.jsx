@@ -10,6 +10,7 @@ export const ProjectPage = () => {
   const supabase = createClient('https://ndnfqgznxmxuserdlhhl.supabase.co', "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5kbmZxZ3pueG14dXNlcmRsaGhsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDA0MDQwNjUsImV4cCI6MjAxNTk4MDA2NX0.XBHCk_KnwRYLHRGt3jqjdVrls5Y6x3Z-nX9YL4zIaAs");
   const {id} = useParams();
   const email = localStorage.getItem("email");
+  const userId = localStorage.getItem("id");
   const [work, setWork] = useState(null);
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -19,17 +20,17 @@ export const ProjectPage = () => {
 
   const getWorkId = async () => {
     try {
-      setLoading(true);
-      const {data} = await supabase
-        .from('works')
-        .select('*')
-        .eq("id", id);
-
-      setWork(data[0]);
+    setLoading(true);
+    const {data} = await supabase
+    .from('works')
+    .select('*')
+    .eq("id", id);
+    
+    setWork(data[0]);
     } catch (e) {
-      console.log(e);
+    console.log(e);
     } finally {
-      setLoading(false);
+    setLoading(false);
     }
   };
 
@@ -50,6 +51,32 @@ export const ProjectPage = () => {
       }
     }
   };
+
+  const onRemoveWork = async () => {
+    try {
+    const { error } = await supabase
+    .from('liked_works')
+    .delete()
+    .eq('work_id', id);
+    
+    const { error: error1 } = await supabase
+    .from('works')
+    .delete()
+    .eq('id', id);
+    
+    if (error) {
+    return console.log(error.message);
+    }
+    
+    if (error1) {
+    return console.log(error1.message);
+    }
+    
+    location.href = `${location.origin}/Gallery`;
+    } catch (e) {
+    console.log(e)
+    }
+  }
 
   useEffect(() => {
     (async () => {
@@ -117,6 +144,13 @@ export const ProjectPage = () => {
                     </p>
                     <div className={style.resumeService}>
                       <ResumeService telegram={user.telegram} behance={user.behance} vk={user.vk} ps={user.ps} figma={user.figma} ai={user.ai} facebook={user.facebook} dribble={user.dribble} />
+                    </div>
+                    <div>
+                      {work.user_id === userId && (
+                      <button className={style.button__remove} onClick={() => onRemoveWork()}>
+                      Remove this work
+                      </button>
+                      )}
                     </div>
                   </div>
                 </div>

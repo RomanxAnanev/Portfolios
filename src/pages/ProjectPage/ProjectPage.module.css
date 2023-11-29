@@ -126,3 +126,22 @@ line-height: normal;
     margin-top: 20px;
     margin-left: -15px;
 }
+
+.button__remove{
+    border-radius: 8px;
+    border-top: 2px solid #000;
+    border-right: 2px solid #000;
+    border-bottom: 4px solid #000;
+    border-left: 2px solid #000;
+    background: #F94A29;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 219px;
+    height: 46px;
+    color: #01131E;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
