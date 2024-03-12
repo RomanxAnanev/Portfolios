@@ -38,7 +38,7 @@ export const SelectDropdownStack = ({stackValue, setStack}) => {
         <div>
             <h1 className='input__title__url'>Stack</h1>
             <div className="d-flex justify-content-center">
-                <div className="custom-dropdown">
+                <div className="custom-dropdown flex flex-col gap-y-2">
                     <button
                         className="optionId"
                         type="button"

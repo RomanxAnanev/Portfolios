@@ -65,9 +65,9 @@ export const SelectDropdownContact = ({contacts, setContacts}) => {
                 </div> 
                 <div style={{ marginLeft: '20px', width: '50%' }}> 
                     <ul className='added__inputs'> 
-                        {select_Contacts[0] && <input className='added__input' type="url" value={contacts.vk} onChange={(e) => setContacts({...contacts, vk: e.target.value})} placeholder="Vkcontacte url" />}
-                        {select_Contacts[1] && <input className='added__input' type="url" value={contacts.tg} onChange={(e) => setContacts({...contacts, tg: e.target.value})} placeholder="Telegramm url" />}
-                        {select_Contacts[2] && <input className='added__input' type="url" value={contacts.fb} onChange={(e) => setContacts({...contacts, fb: e.target.value})} placeholder="Facebook url" />}
+                        {!!select_Contacts.find(item => item === contact[0].id) && <input className='added__input' type="url" value={contacts.vk} onChange={(e) => setContacts({...contacts, vk: e.target.value})} placeholder="Vkcontacte url" />}
+                        {!!select_Contacts.find(item => item === contact[1].id) && <input className='added__input' type="url" value={contacts.tg} onChange={(e) => setContacts({...contacts, tg: e.target.value})} placeholder="Telegramm url" />}
+                        {!!select_Contacts.find(item => item === contact[2].id) && <input className='added__input' type="url" value={contacts.fb} onChange={(e) => setContacts({...contacts, fb: e.target.value})} placeholder="Facebook url" />}
                     </ul> 
                 </div> 
             </div> 

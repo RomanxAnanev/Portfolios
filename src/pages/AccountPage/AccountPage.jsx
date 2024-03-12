@@ -95,7 +95,7 @@ export const AccountPage = () => {
           <div className={style.resumeService}>
             {user &&
               <ResumeService vk={user.vk} telegram={user.telegram} facebook={user.facebook} dribble={user.dribble}
-                             behance={user.behance} figma={user.figma} ps={user.ps} ai={user.ai}/>
+                             behance={user.behance} figma={user.figma} ps={user.ps} ai={user.ai} />
             }
           </div>
         </div>
@@ -107,7 +107,7 @@ export const AccountPage = () => {
           :
           !!works.length ?
             works.map(work => (
-              <Card key={work.id} avatar={work.user_avatar} id={work.id} idUser={work.user_id} username={work.username} likes={work.count}/>
+              <Card key={work.id} avatar={work.user_avatar} id={work.id} idUser={work.user_id} username={work.username} likes={work.count} img={work.img_path}/>
             ))
             :
             <h3>The user has no published projects</h3>
