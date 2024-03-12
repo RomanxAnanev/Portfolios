@@ -33,7 +33,7 @@ export const SelectDropdownContact = ({contacts, setContacts}) => {
         <div> 
             <h1 className='input__title__url'>Contacts</h1>
             <div className="d-flex justify-content-center"> 
-                <div className="custom-dropdown"> 
+                <div className="custom-dropdown flex flex-col gap-y-2"> 
                     <button 
                         className="optionId"
                         type="button"
@@ -54,8 +54,7 @@ export const SelectDropdownContact = ({contacts, setContacts}) => {
                                     type="checkbox"
                                     id={`option_${option.id}`} 
                                     label={option.label} 
-                                    checked= 
-                                        {select_Contacts.includes(option.id)} 
+                                    checked= {select_Contacts.includes(option.id)} 
                                     onChange={courseChange} 
                                     value={option.id} 
                                 /> 
