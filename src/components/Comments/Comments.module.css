@@ -1,0 +1,94 @@
+.form_comments{
+    display: flex;
+    flex-direction: column;
+    max-width: 579px;
+}
+.form_textarea{
+    background-color: #FFFFF3;
+    color: #01131E;
+
+    font-size: 20px;
+    font-weight: 500;
+    border: 2px solid #01131E;
+    border-bottom: 4px solid #01131E;
+    border-radius: 10px;
+    max-width: 579px;
+    height: 89px;
+}
+textarea {
+    scrollbar-color: #5B6D78; 
+    resize:none;
+    padding: 14px 18px;
+}
+
+textarea {
+    scroll-padding: 12px;
+}
+textarea::-webkit-scrollbar {
+    margin-right: 5px;
+    width: 10px; 
+    background-color: #5B6D78; 
+    border-radius: 5px; 
+
+}
+
+
+-webkit-scrollbar-thumb {
+    background-color: #5B6D78; 
+    border-radius: 5px; 
+}
+
+.button{
+    margin-top: 10px;
+    padding: 10px 20px 11px 20px;
+    max-width: 144px;
+    background-color: #299AF9;
+    border: 2px solid #01131E;
+    border-bottom: 4px solid #01131E;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+}
+
+.comment{
+    display: flex;
+    margin-top: 20px;
+}
+
+
+.comment_img > img{
+    object-fit: cover;
+    border-right: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: 2px solid #01131E;
+}
+.text_title{
+    display: flex;
+    align-items: center;
+    margin-left: 11px;
+}
+.text_name{
+    font-size: 20px;
+    font-weight: 600;
+    color: #01131E;
+}
+.text_point{
+    margin: 0 10px;
+}
+.text_date{
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #5a5a5a;
+}
+
+.text_description{
+    font-size: 17px;
+    color: #01131E;
+    font-weight: 500;
+    margin-left: 11px;
+}

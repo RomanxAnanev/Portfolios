@@ -35,7 +35,6 @@ export const SignUp = () => {
     }
 
 
-  // регистрация
   const registerUser = async (email, password) => {
       const image = RandomIndexArray(images_links);
 
@@ -60,6 +59,11 @@ export const SignUp = () => {
         email: email,
           user_avatar: image
       });
+
+      if (error) {
+        setError(error.message);
+        return console.log(error.message);
+    }
 
     location.href = `${location.origin}/`;
   }
