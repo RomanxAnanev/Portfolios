@@ -10,7 +10,7 @@ export const Gallery = () => {
   const supabase = createClient('https://ndnfqgznxmxuserdlhhl.supabase.co', "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5kbmZxZ3pueG14dXNlcmRsaGhsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDA0MDQwNjUsImV4cCI6MjAxNTk4MDA2NX0.XBHCk_KnwRYLHRGt3jqjdVrls5Y6x3Z-nX9YL4zIaAs");
   const email = localStorage.getItem("email");
   const [works, setWorks] = useState([]);
-  const [title, setTitle] = useState([]);
+  const [title, setTitle] = useState(undefined);
   const [loading, setLoading] = useState(false);
 
   ZeroScroll()
@@ -22,7 +22,7 @@ export const Gallery = () => {
         const {data} = await supabase
           .from('works')
           .select('*')
-          .ilike('username', `%${title}%`)
+          .ilike('name', `%${title}%`)
           .order('created_at', {ascending: false});
 
         return setWorks(data);

@@ -156,7 +156,7 @@ export const ProjectPage = () => {
                   </div>
                 </div>
               </div>
-              <Comments></Comments>
+              <Comments itemId = {work.id}/>
             </>
           )
         }
