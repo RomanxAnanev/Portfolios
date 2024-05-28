@@ -1,4 +1,8 @@
+.comments{
+    margin-top: 40px;
+}
 .form_comments{
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     max-width: 579px;
