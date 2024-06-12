@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import style from './SignUp.module.css'
+import style from './SignUP.module.css'
 import {Formik} from 'formik';
 import {NavLink} from 'react-router-dom'
 import {createClient} from '@supabase/supabase-js';
