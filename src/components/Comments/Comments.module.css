@@ -10,7 +10,6 @@
 .form_textarea{
     background-color: #FFFFF3;
     color: #01131E;
-
     font-size: 20px;
     font-weight: 500;
     border: 2px solid #01131E;
@@ -76,23 +75,26 @@ textarea::-webkit-scrollbar {
     margin-left: 11px;
 }
 .text_name{
+    font-family: ClashDisplay-Semibold, Roboto;
+    font-weight: 500;
     font-size: 20px;
-    font-weight: 600;
     color: #01131E;
 }
 .text_point{
     margin: 0 10px;
 }
 .text_date{
+    font-family: ClashDisplay-Semibold, Roboto;
+    font-weight: 500;
     margin-top: 5px;
     font-size: 14px;
-    font-weight: 600;
     color: #5a5a5a;
 }
 
 .text_description{
+    font-family: ClashDisplay-Medium, Roboto;
+    font-weight: 400;
     font-size: 17px;
     color: #01131E;
-    font-weight: 500;
     margin-left: 11px;
 }

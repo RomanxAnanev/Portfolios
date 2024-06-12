@@ -90,12 +90,11 @@
     align-items: center;
     gap: 10px;
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    font-family: Clash Display;
     position: absolute;
     z-index: 2;
     bottom: 20px;
@@ -105,7 +104,7 @@
 
 .portfolio__titleH1{
     color: #FFFFF3;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Bold;
     font-size: 50px;
     font-style: normal;
     font-weight: 700;
@@ -121,11 +120,12 @@
 
 .portfolio__titleH1 > span{
     color: #01131E;
+    font-family: ClashDisplay-Bold;
 }
 
 .portfolio__titleH2{
     color: #FFFFF3;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
@@ -140,7 +140,7 @@
 
 .portfolio__descriprion{
     color: #FFFFF3;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Medium;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -168,7 +168,7 @@
 
 .resumes__titleH1{
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Bold;
     font-size: 50px;
     font-style: normal;
     font-weight: 700;
@@ -181,7 +181,7 @@
 
 .resumes__titleH2{
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
@@ -194,7 +194,7 @@
 
 .resumes__descriprion{
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Medium;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -212,7 +212,7 @@
 }
 .resumes__resume_title{
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
@@ -233,7 +233,7 @@
     border-left: 2px solid #01131E;
     background: #F94A29;
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
@@ -256,14 +256,15 @@
     justify-content: space-between;
 }
 
-.resumeSeacrion__title{
+.resumeSeaction__title{
     font-family: Clash Display;
     padding-top: 130px;
     position: relative;
     background: url(ResumeSectionBGSquare.svg) no-repeat 417px 126px
 }
 
-.resumeSeacrion__title > h1{
+.resumeSeaction__title > h1{
+    font-family: ClashDisplay-Bold;
     width: 722px;
     width: 100%;
     color: #01131E;
@@ -284,7 +285,8 @@
     
 }
 
-.resumeSeacrion__title > h2{
+.resumeSeaction__title > h2{
+    font-family: ClashDisplay-Semibold;
     max-width: 551px;
     width: 100%;
     color: #01131E;
@@ -369,7 +371,7 @@
 }
 .avatar__buttons__create{
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
@@ -386,7 +388,7 @@
 }
 .avatar__buttons__view{
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
@@ -425,7 +427,7 @@
 .gallarySeaction__h1{
     color: #01131E;
     text-align: right;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Bold;
     font-size: 50px;
     font-style: normal;
     font-weight: 700;
@@ -435,7 +437,7 @@
 }
 .gallarySeaction__h2{
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
@@ -469,7 +471,7 @@
     border-left: 2px solid #01131E;
     background: #FFFFF3;
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
@@ -490,7 +492,7 @@
     border-left: 2px solid #01131E;
     background: #FEDE65;
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
@@ -601,12 +603,11 @@
         align-items: center;
         gap: 10px;
         color: #01131E;
-        font-family: Clash Display;
+        font-family: ClashDisplay-Semibold;
         font-size: 20px;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
-        font-family: Clash Display;
         position: absolute;
         z-index: 2;
         bottom: 20px;
@@ -630,8 +631,8 @@
         height: 890px;
     }
     
-    .resumeSeacrion__title{
-        font-family: Clash Display;
+    .resumeSeaction__title{
+        font-family: ClashDisplay-Bold;
         padding-top: 130px;
         position: relative;
         background: url(ResumeSectionBGSquare.svg) no-repeat 417px 126px;
@@ -640,6 +641,7 @@
     
     .resumeSeacrion__title > h1{
         max-width: 580px;
+        font-family: ClashDisplay-Bold;
         width: 100%;
         color: #01131E;
         font-size: 48px;
@@ -662,6 +664,7 @@
     
     .resumeSeacrion__title > h2{
         max-width: 551px;
+        font-family: ClashDisplay-Semibold;
         width: 100%;
         color: #01131E;
         font-size: 32px;

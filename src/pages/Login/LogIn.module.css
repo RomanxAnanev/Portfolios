@@ -9,7 +9,6 @@
 .logIn{
     color: #01131E;
     background-color: #FFFFF3;
-    font-family: Clash Display, Roboto;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -24,7 +23,7 @@ body {
 
 input{
     color: #000;
-    font-family: Clash Display, Roboto;
+    font-family: ClashDisplay-Medium, Roboto;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -51,7 +50,7 @@ input{
     width: 100%;
     color: #01131E;
     text-align: center;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
@@ -63,7 +62,7 @@ input{
 .title__p{
     color: #5A5A5A;
     text-align: center;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Medium;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -79,7 +78,7 @@ input{
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    font-family: Clash Display, Roboto;
+    font-family: ClashDisplay-Medium, Roboto;
     color: #01131E;
     font-size: 20px;
     font-style: normal;
@@ -89,7 +88,7 @@ input{
 }
 .password__span{
     color: #5A5A5A;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Medium;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -105,7 +104,7 @@ input{
     border-radius: 8px;
     border: 2px solid #01131E;
     background: #FFFFF3;
-    font-family: Clash Display, Roboto;
+    font-family: ClashDisplay-Medium, Roboto;
     padding-left: 10px;
     transition: border-bottom 0.08s ease;
     transition: height 0.08s ease;
@@ -124,8 +123,11 @@ input{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Medium;
     margin-top: 30px;
+}
+.input__title p{
+    font-family: ClashDisplay-Medium;
 }
 
 .form__button{
@@ -141,7 +143,7 @@ input{
     border-left: 2px solid #000;
     background: #299AF9;
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
@@ -157,7 +159,7 @@ input{
 
 .form__sign{
     color: #5A5A5A;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Medium;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -168,11 +170,13 @@ input{
     margin-left: 5px;
     text-decoration-line: underline;
     cursor: pointer;
+    color: #5A5A5A;
+    font-family: ClashDisplay-Medium;
 }
 
 .form__home{
     color: #5A5A5A;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Medium;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -182,7 +186,7 @@ input{
 }
 .intup__h3{
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Medium;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -190,7 +194,7 @@ input{
 }
 .error{
     color: #c16161;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Medium;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;

@@ -32,10 +32,9 @@
 }
 .author__name{
     color: #01131E;
-    font-family: Clash Display;
-    font-size: 20px;
-    font-style: normal;
+    font-family: ClashDisplay-Semibold, Roboto;
     font-weight: 600;
+    font-size: 20px;
     line-height: normal;
 }
 
@@ -47,10 +46,9 @@
 .likes__count{
     color: #000;
     text-align: right;
-    font-family: Clash Display;
-    font-size: 20px;
-    font-style: normal;
+    font-family: ClashDisplay-Medium, Roboto;
     font-weight: 500;
+    font-size: 20px;
     line-height: normal;
 }
 .likes__button{

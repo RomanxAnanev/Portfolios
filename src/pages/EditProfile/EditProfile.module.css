@@ -12,7 +12,7 @@
 
 .input__title{
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Medium;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -41,7 +41,7 @@
 
 .input__title__url{
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Medium;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -76,7 +76,7 @@
     align-items: center;
     gap: 10px;
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
@@ -92,7 +92,7 @@
 }
 .resume__h1{
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
@@ -106,15 +106,18 @@
 .content__resumText{
     width: 432px;
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Medium;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 }
+.content__resumText p{
+    font-family: ClashDisplay-Medium;
+}
 .resume__h2{
     color: #000;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -138,7 +141,7 @@
     margin-right: 20px;
     padding-left: 25px;
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -146,7 +149,7 @@
 }
 .valute{
     color: #5B6D78;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -158,7 +161,7 @@
 }
 .fromTo{
     color: #5B6D78;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -171,7 +174,7 @@
 }
 .resume__label__button{
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;

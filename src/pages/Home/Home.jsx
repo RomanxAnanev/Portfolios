@@ -127,7 +127,7 @@ export const Home = () => {
 
       <section className="resumeSection__bg">
         <div className="resumeSeaction container">
-          <div className="resumeSeacrion__title">
+          <div className="resumeSeaction__title">
             <h1>
               Find employees people for a joint project or let them look for you !
             </h1>

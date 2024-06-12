@@ -41,7 +41,7 @@
 }
 .input__title{
     color: #000;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Medium;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -55,7 +55,7 @@
 }
 .input__title__url{
     color: #000;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Medium;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -84,14 +84,14 @@
     border-bottom: 4px solid #000;
     border-left: 2px solid #000;
     background: #299AF9;
-    width: 280px;
+    width: 180px;
     height: 50px;
     padding: 10px 20px 11px 20px;
     justify-content: center;
     align-items: center;
     gap: 10px;
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;

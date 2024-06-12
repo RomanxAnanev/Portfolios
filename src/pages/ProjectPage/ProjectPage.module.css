@@ -32,7 +32,7 @@ a{
 
 .title__h1 > h1{
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Bold;
     font-size: 50px;
     font-style: normal;
     font-weight: 700;
@@ -41,7 +41,7 @@ a{
 
 .title__h2 > h2{
 color: #01131E;
-font-family: Clash Display;
+font-family: ClashDisplay-Semibold;
 font-size: 32px;
 font-style: normal;
 font-weight: 600;
@@ -74,7 +74,7 @@ line-height: normal;
 }
 .profile__text > h1{
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 28px;
     font-style: normal;
     font-weight: 600;
@@ -82,7 +82,7 @@ line-height: normal;
 }
 .profile__text > h2{
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Medium;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
@@ -111,7 +111,7 @@ line-height: normal;
     max-width: 580px;
     width: 100%;
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Medium, Roboto;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -119,12 +119,21 @@ line-height: normal;
     text-align: left;
     margin-top: 20px;
 }
+.content__desc > p{
+    font-family: ClashDisplay-Medium, Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+}
 .resumeService{
     margin-top: 20px;
     margin-left: -15px;
 }
 
 .button__remove{
+    font-family: ClashDisplay-Semibold;
     border-radius: 8px;
     border-top: 2px solid #000;
     border-right: 2px solid #000;

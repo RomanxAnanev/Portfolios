@@ -28,7 +28,7 @@ export const Footer = () => {
             <ul className={style.nav__list}>
                 {menu.map(item => (
                 <NavLink to={item.src} key={item.name}>
-                    {item.name}
+                    <li>{item.name}</li>
                 </NavLink>
                 ))}
             </ul>

@@ -8,7 +8,7 @@
 }
 .titleH1{
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Bold;
     font-size: 92px;
     font-style: normal;
     font-weight: 700;
@@ -17,7 +17,7 @@
 
 .titleH2{
     color: #5A5A5A;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 30px;
     font-style: normal;
     font-weight: 600;

@@ -32,7 +32,7 @@
 }
 .info__name{
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
@@ -40,7 +40,7 @@
 }
 .info__spec{
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Medium;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
@@ -55,7 +55,7 @@
     left: 300px;
 }.link__title{
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -71,7 +71,7 @@
 
 .price__count{
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -116,7 +116,7 @@
     justify-content: center;
     align-items: center;
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;

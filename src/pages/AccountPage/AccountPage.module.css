@@ -19,7 +19,7 @@ a{
 .goBack{
     display: flex;
     color: #5A5A5A;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
@@ -38,6 +38,7 @@ a{
 .author__profile{
     display: flex;
     gap: 20px;
+    height: 53px;
 }
 
 .profile__text{
@@ -47,7 +48,7 @@ a{
 }
 .profile__text > h1{
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Semibold;
     font-size: 28px;
     font-style: normal;
     font-weight: 600;
@@ -55,7 +56,7 @@ a{
 }
 .profile__text > h2{
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Medium;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
@@ -79,16 +80,16 @@ a{
     width: 80px;
     height: 80px;
 }
-.content__desc{
+.content__desc p{
     width: 565px;
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Medium;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     text-align: left;
-    margin-top: 20px;
+    margin-top: 14px;
 }
 .accountPage__projects{
     margin-top: 60px;

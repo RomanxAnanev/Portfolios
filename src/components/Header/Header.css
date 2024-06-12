@@ -12,7 +12,6 @@ a{
     border-right: 3px solid #01131E;
     border-bottom: 6px solid #01131E;
     border-left: 3px solid #01131E;
-    font-family: 'Clash Grotesk', sans-serif;
     width: 1180px;
     height: 117px;
     padding: 0px 20px 0px 20px;
@@ -40,7 +39,6 @@ a{
     gap: 20px;
 }
 .login{
-    font-family: 'Clash Grotesk', sans-serif;
     border-radius: 8px;
     border-top: 2px solid #000;
     border-right: 2px solid #000;
@@ -49,8 +47,6 @@ a{
     background: #F94A29;
     color: #01131E;
     font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
     line-height: normal;
     padding: 10px 20px 11px 20px;
     cursor: pointer;
@@ -93,7 +89,6 @@ a{
         border-right: 0px solid #01131E;
         border-bottom: 4px solid #01131E;
         border-left: 0px solid #01131E;
-        font-family: 'Clash Grotesk', sans-serif;
         width: 880px;
         height: 93px;
         margin-top: 0px;

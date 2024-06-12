@@ -8,7 +8,7 @@
     width: 379px;
     height: 50px;
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Medium;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -34,7 +34,7 @@
 }
 .input__title__url{
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Medium;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -56,7 +56,7 @@
 }
 .form-check-label{
     color: #01131E;
-    font-family: Clash Display;
+    font-family: ClashDisplay-Medium;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
