@@ -106,7 +106,7 @@ export const EditProfile = () => {
                     <h1 className={style.input__title}>Profession</h1>
                     {user &&
                         <input type="text" onChange={(e) => setProfession(e.target.value)} value={profession}/>}
-                    <h1 className={style.input__title}>Descriptoin</h1>
+                    <h1 className={style.input__title}>Description</h1>
                     {/* {user && <input type="text" onChange={(e) => setDescription(e.target.value)}
                     value={description}/>} */}
                     <textarea spellCheck="false" className={style.form_textarea} 
