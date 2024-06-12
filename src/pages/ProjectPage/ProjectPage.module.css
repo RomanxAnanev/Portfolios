@@ -32,7 +32,7 @@ a{
 
 .title__h1 > h1{
     color: #01131E;
-    font-family: ClashDisplay-Bold;
+    font-family: ClashDisplay-Bold, Roboto;
     font-size: 50px;
     font-style: normal;
     font-weight: 700;
@@ -41,7 +41,7 @@ a{
 
 .title__h2 > h2{
 color: #01131E;
-font-family: ClashDisplay-Semibold;
+font-family: ClashDisplay-Semibold, Roboto;
 font-size: 32px;
 font-style: normal;
 font-weight: 600;
@@ -74,7 +74,7 @@ line-height: normal;
 }
 .profile__text > h1{
     color: #01131E;
-    font-family: ClashDisplay-Semibold;
+    font-family: ClashDisplay-Semibold, Roboto;
     font-size: 28px;
     font-style: normal;
     font-weight: 600;
@@ -82,7 +82,7 @@ line-height: normal;
 }
 .profile__text > h2{
     color: #01131E;
-    font-family: ClashDisplay-Medium;
+    font-family: ClashDisplay-Medium, Roboto;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
@@ -133,7 +133,7 @@ line-height: normal;
 }
 
 .button__remove{
-    font-family: ClashDisplay-Semibold;
+    font-family: ClashDisplay-Semibold, Roboto;
     border-radius: 8px;
     border-top: 2px solid #000;
     border-right: 2px solid #000;

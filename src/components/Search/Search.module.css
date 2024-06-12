@@ -24,6 +24,7 @@
 
 .input__search__button{
     outline: none;
+    font-family: 'ClashDisplay-Medium';
     background: #FFFFF3;
     color: #01131E;
     font-size: 20px;

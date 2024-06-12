@@ -17,6 +17,7 @@
     border-radius: 10px;
     max-width: 579px;
     height: 89px;
+    font-family: ClashDisplay-Medium, Roboto;
 }
 textarea {
     scrollbar-color: #5B6D78; 

@@ -10,9 +10,17 @@
     gap: 20px;
 }
 
+.profile__img{
+    border: 3px solid #01131E;
+    border-radius: 5px;
+    width: 580px;
+    height: 360px;
+    object-fit: cover;
+}
+
 .input__title{
     color: #01131E;
-    font-family: ClashDisplay-Medium;
+    font-family: ClashDisplay-Medium, Roboto;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -20,7 +28,28 @@
     margin-bottom: 10px;
     margin-top: 10px;
 }
-
+.input__title1{
+    color: #01131E;
+    font-family: ClashDisplay-Medium, Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+.form_textarea{
+    background-color: #FFFFF3;
+    color: #01131E;
+    font-size: 20px;
+    font-weight: 500;
+    border: 2px solid #01131E;
+    border-bottom: 4px solid #01131E;
+    border-radius: 10px;
+    width: 579px;
+    height: 134px;
+    font-family: ClashDisplay-Medium, Roboto;
+}
 .inputs > input{
     width: 580px;
     height: 50px;
@@ -41,7 +70,7 @@
 
 .input__title__url{
     color: #01131E;
-    font-family: ClashDisplay-Medium;
+    font-family: ClashDisplay-Medium, Roboto;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -69,14 +98,14 @@
     border-bottom: 4px solid #000;
     border-left: 2px solid #000;
     background: #299AF9;
-    width: 280px;
+    width: 180px;
     height: 50px;
     padding: 10px 20px 11px 20px;
     justify-content: center;
     align-items: center;
     gap: 10px;
     color: #01131E;
-    font-family: ClashDisplay-Semibold;
+    font-family: ClashDisplay-Semibold, Roboto;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
@@ -92,7 +121,7 @@
 }
 .resume__h1{
     color: #01131E;
-    font-family: ClashDisplay-Semibold;
+    font-family: ClashDisplay-Semibold, Roboto;
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
@@ -106,18 +135,18 @@
 .content__resumText{
     width: 432px;
     color: #01131E;
-    font-family: ClashDisplay-Medium;
+    font-family: ClashDisplay-Medium, Roboto;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 }
 .content__resumText p{
-    font-family: ClashDisplay-Medium;
+    font-family: ClashDisplay-Medium, Roboto;
 }
 .resume__h2{
     color: #000;
-    font-family: ClashDisplay-Semibold;
+    font-family: ClashDisplay-Semibold, Roboto;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -141,7 +170,7 @@
     margin-right: 20px;
     padding-left: 25px;
     color: #01131E;
-    font-family: ClashDisplay-Semibold;
+    font-family: ClashDisplay-Semibold, Roboto;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -149,7 +178,7 @@
 }
 .valute{
     color: #5B6D78;
-    font-family: ClashDisplay-Semibold;
+    font-family: ClashDisplay-Semibold, Roboto;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -161,7 +190,7 @@
 }
 .fromTo{
     color: #5B6D78;
-    font-family: ClashDisplay-Semibold;
+    font-family: ClashDisplay-Semibold, Roboto;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -174,7 +203,7 @@
 }
 .resume__label__button{
     color: #01131E;
-    font-family: ClashDisplay-Semibold;
+    font-family: ClashDisplay-Semibold, Roboto;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;

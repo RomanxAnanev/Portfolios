@@ -66,15 +66,21 @@ export const AddProjectPage = () => {
             <div className={style.addProjectPage__content}>
                 <img className={style.project__img} src={work.preview || work.img_path} alt=""/>
                 <label className={style.inputs} htmlFor="">
-                    <h1 className={style.input__title}>Project name</h1>
+                    <h1 className={style.input__title1}>Project name</h1>
                     <input type="text" value={work.name} onChange={(e) => setWork({...work, name: e.target.value})} required/>
                     <h1 className={style.input__title}>Direction</h1>
                     <input type="text" value={work.direction}
                            onChange={(e) => setWork({...work, direction: e.target.value})} required/>
                     <h1 className={style.input__title}>Description</h1>
-                    <input type="text" value={work.description}
-                           onChange={(e) => setWork({...work, description: e.target.value})} required/>
-                           <h1 className={style.input__title}>Preview Url</h1>
+                    {/* <input type="text" value={work.description}
+                           onChange={(e) => setWork({...work, description: e.target.value})} required/> */}
+                    <textarea spellCheck="false" className={style.form_textarea} 
+                      value={work.description}
+                      onChange={(e) => setWork({...work, description: e.target.value})}
+                      required>
+                    </textarea>
+                      
+                    <h1 className={style.input__title}>Preview Url</h1>
                     <input type="text" value={work.preview}
                            onChange={(e) => setWork({...work, preview: e.target.value})} required/>
                 </label>

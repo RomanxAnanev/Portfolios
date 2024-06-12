@@ -54,7 +54,7 @@ export const Home = () => {
   }, []);
 
   return (
-    <>
+    <div className='body'>
       <section className='heroSeaction container'>
         <img className='heroSeaction_star' src="/HeroSeactionstar.svg" alt=""/>
         <div className="heroSeaction__portfolio">
@@ -236,7 +236,7 @@ export const Home = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   )
 }
 

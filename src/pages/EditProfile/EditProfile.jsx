@@ -101,14 +101,20 @@ export const EditProfile = () => {
             <div className={style.editProfile__content}>
                 {avatar && <img className={style.profile__img} src={avatar} alt=""/>}
                 <label className={style.inputs} htmlFor="">
-                    <h1 className={style.input__title}>Name</h1>
+                    <h1 className={style.input__title1}>Name</h1>
                     {user && <input type="text" onChange={(e) => setName(e.target.value)} value={name}/>}
                     <h1 className={style.input__title}>Profession</h1>
                     {user &&
                         <input type="text" onChange={(e) => setProfession(e.target.value)} value={profession}/>}
                     <h1 className={style.input__title}>Descriptoin</h1>
-                    {user && <input type="text" onChange={(e) => setDescription(e.target.value)}
-                                    value={description}/>}
+                    {/* {user && <input type="text" onChange={(e) => setDescription(e.target.value)}
+                    value={description}/>} */}
+                    <textarea spellCheck="false" className={style.form_textarea} 
+                      value={description}
+                      onChange={(e) => setDescription(e.target.value)}
+                      required>
+                    </textarea>
+
                 </label>
             </div>
             <label className={style.services} htmlFor="">
