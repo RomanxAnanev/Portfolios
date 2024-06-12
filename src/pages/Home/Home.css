@@ -19,7 +19,7 @@
     border-bottom: 6px solid #01131E;
     border-left: 3px solid #01131E;
     background: #CF65FE;
-    background-image: url(/StarG.svg);
+    background-image: url(../../../public/StarG.svg);
     background-repeat: no-repeat;
     background-position: 8px 6px;
     height: 655px;
@@ -163,7 +163,7 @@
     max-width: 590px;
     height: 655px;
     width: 100%;
-    background-image: url(/VacanciesSquare.svg);
+    background-image: url(../../../public/VacanciesSquare.svg);
     background-repeat: no-repeat;
     background-position: 30px 160px;
 }
@@ -262,7 +262,7 @@
     font-family: Clash Display;
     padding-top: 130px;
     position: relative;
-    background: url(ResumeSectionBGSquare.svg) no-repeat 417px 126px
+    background: url(../../../public/ResumeSectionBGSquare.svg) no-repeat 417px 126px
 }
 
 .resumeSeaction__title > h1{
@@ -300,7 +300,7 @@
     margin-left: 127px;
     word-spacing: 5px;
     padding-bottom: 212px;
-    background: url(FIBEPS.svg) no-repeat 50px 110px
+    background: url(../../../public/FIBEPS.svg) no-repeat 50px 110px
 }
 
 .resumeSection__avatar{
@@ -637,7 +637,7 @@
         font-family: ClashDisplay-Bold;
         padding-top: 130px;
         position: relative;
-        background: url(ResumeSectionBGSquare.svg) no-repeat 417px 126px;
+        background: url(../../../public/ResumeSectionBGSquare.svg) no-repeat 417px 126px;
         max-width: 663px;
     }
     
