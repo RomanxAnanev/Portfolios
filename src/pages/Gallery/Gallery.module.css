@@ -33,3 +33,13 @@
     gap: 60px 20px;
     margin-bottom: 60px;
 }
+
+@media screen and (max-width: 880px){
+    .gallery{
+        max-width: 580px;
+        width: 100%;
+    }
+    .func__button{
+        display: none;
+    }
+}

@@ -42,3 +42,19 @@
     gap: 40px 60px;
     margin-bottom: 40px;
 }
+
+@media screen and (max-width: 880px){
+    .resumes{
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 580px;
+        padding: 0px 50px;
+        width: 100%;
+        border-radius: 20px;
+        margin-bottom: 60px;
+    }
+    .func__button{
+        display: none;
+    }
+}
