@@ -38,7 +38,7 @@ export const Comments = ({itemId}) => {
         const { data, error } = await supabase
           .from('comments')
           .insert([
-            { post_id: itemId, user_id: idUser, message:  commentText, user_name: user.name},
+            { post_id: itemId, user_id: idUser, message:  commentText, user_name: user.name, user_avatar: user.avatar},
           ])
         window.location.reload()
       } catch (e) {
@@ -57,9 +57,12 @@ export const Comments = ({itemId}) => {
         </form>
         {commentData?.map((item)=>(
             <div className={style.comment} key={item.id}>
+              <Link to={`${location.origin}/AccountPage/${item.user_id}`}>
               <div className={style.comment_img}>
-                <img src="/avatarBlue.png" alt="" />
-              </div>
+                <img src={item.user_avatar} alt=""/>
+                </div>
+              </Link>
+
               <div className={style.comment_text}>
                 <div className={style.text_title}>
                   <Link to={`${location.origin}/AccountPage/${item.user_id}`}>
