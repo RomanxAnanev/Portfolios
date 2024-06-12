@@ -419,7 +419,7 @@
     padding-bottom: 130px;
 }
 .gallarySection{
-    background-image: url('/Frame50.svg');
+    background-image: url('../../../public/Frame50.svg');
     background-position: 30px;
     background-repeat: no-repeat;
     display: flex;
@@ -764,9 +764,9 @@
     }
     
 
-    .gallerySeaction{
+    .gallarySection{
         flex-direction: column;
-        background-size: 0px 0px;
+        background-image: none;
     }
     .gallarySeaction__h1{
         width: 580px;
