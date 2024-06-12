@@ -641,7 +641,7 @@
         max-width: 663px;
     }
     
-    .resumeSeacrion__title > h1{
+    .resumeSeaction__title > h1{
         max-width: 580px;
         font-family: ClashDisplay-Bold;
         width: 100%;
@@ -664,7 +664,7 @@
         
     }
     
-    .resumeSeacrion__title > h2{
+    .resumeSeaction__title > h2{
         max-width: 551px;
         font-family: ClashDisplay-Semibold;
         width: 100%;
@@ -676,8 +676,7 @@
         margin-top: 20px;
         margin-left: 0px;
         word-spacing: 5px;
-        padding-bottom: 25px;
-        background: none
+        padding-bottom: 0px;
     }
     
     .resumeSection__avatar{
@@ -764,4 +763,30 @@
         display: none;
     }
     
+
+    .gallerySeaction{
+        flex-direction: column;
+        background-size: 0px 0px;
+    }
+    .gallarySeaction__h1{
+        width: 580px;
+        text-align: left;
+    }
+    .gallarySeaction__h2{
+        text-align: left;
+        width: 580px;
+        margin-left: 0px;
+    }
+    .gallarySeaction__photowr{
+        margin-top: 500px;
+    }
+    .gallarySeactionArrow {
+        position: absolute;
+        left: 180px;
+        top: -30px;
+    }
+    .gallarySection__content__buttons__share {
+        display: none;
+    }
+
 }
